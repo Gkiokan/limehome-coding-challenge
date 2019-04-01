@@ -27,5 +27,11 @@ export default [
       { path: 'password', name: 'settings.password', component: SettingsPassword }
     ] },
 
+  {
+      path: '/get-started',
+      name: 'get-started',
+      component: () => import('~/pages/limehome/get-started').then( m => m.default || m)
+  },
+
   { path: '*', component: NotFound }
 ]
