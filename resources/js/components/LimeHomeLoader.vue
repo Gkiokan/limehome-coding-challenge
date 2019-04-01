@@ -35,33 +35,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    $green : #0e4822;
+    $background  : #717171;
+
+
     @keyframes lds-blocks {
         0% {
-          background: #80a352;
+          background: $green;
         }
         25% {
-          background: #80a352;
+          background: $green;
         }
         25.25% {
-          background: #64533b;
+          background: $background;
         }
         100% {
-          background: #64533b;
+          background: $background;
         }
     }
 
     @-webkit-keyframes lds-blocks {
         0% {
-          background: #80a352;
+          background: $green;
         }
         25% {
-          background: #80a352;
+          background: $green;
         }
         25.25% {
-          background: #64533b;
+          background: $background;
         }
         100% {
-          background: #64533b;
+          background: $background;
         }
     }
 
@@ -79,9 +83,9 @@ export default {
 
     .lds-blocks div {
         position: absolute;
-        width: 40px;
-        height: 40px;
-        background: #64533b;
+        width: 30px;
+        height: 30px;
+        background: $background;
         -webkit-animation: lds-blocks 0.6s linear infinite;
         animation: lds-blocks 0.6s linear infinite;
     }

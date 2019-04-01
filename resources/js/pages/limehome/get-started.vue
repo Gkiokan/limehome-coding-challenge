@@ -11,9 +11,14 @@
         </div>
       </div>
 
-      <card :title="$t('home')">
-        WELCOME
-      </card>
+
+      <div class='container mt-4 mb-5'>
+
+          <card :title="'List of Properties'">
+            ...
+          </card>
+
+      </div>
 
   </div>
 </template>

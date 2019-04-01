@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container">
+    <div class="container flex-nowrap-off">
       <router-link :to="{ name: user ? 'home' : 'welcome' }" class="navbar-brand">
-        <img src="limehome-logo-dark.png" height="90px" />
+        <img src="limehome-logo-dark.png" class='logo' />
       </router-link>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false">
