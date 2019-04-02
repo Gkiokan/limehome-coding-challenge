@@ -7,7 +7,7 @@ import { HasError, AlertError, AlertSuccess } from 'vform'
 
 import LimeHomeLoader from './LimeHomeLoader'
 import PlacesList from './PlacesList'
-
+import PlacesCard from './PlacesCard'
 
 // Components that are registered globaly.
 [
@@ -21,7 +21,8 @@ import PlacesList from './PlacesList'
 
   // custom components
   LimeHomeLoader,
-  PlacesList
+  PlacesList,
+  PlacesCard,
 ].forEach(Component => {
   Vue.component(Component.name, Component)
 })

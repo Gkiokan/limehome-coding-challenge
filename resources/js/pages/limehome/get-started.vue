@@ -41,18 +41,8 @@
 
       <div class='container mt-4 mb-5'>
 
-          <PlacesList :places="places" />
-
-          <card :title="'List of Properties'">
-            <div class='btn btn-success' v-if="!loaded" @click="getPlaces"> Load Places now! </div>
-
-            <div class='places'>
-                <div class='place' v-for="(place, i) in places" :key="'_place_' + i">
-                    <pre>{{ place }}</pre>
-                    <hr>
-                </div>
-            </div>
-          </card>
+          <PlacesList :places="places"  v-if="show == 'list'" />
+          <PlacesCard :places="places" v-if="show == 'card'" />
 
       </div>
 
@@ -72,6 +62,7 @@ export default {
 
     data(){
       return {
+          show: 'list',
           disableMap: false,
           autoloadPlaces: true,
           current_icon_src: '/current_location.png',
