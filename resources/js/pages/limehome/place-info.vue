@@ -1,20 +1,23 @@
 <template lang="html">
     <div class='page placeinfo'>
 
-        <div class='header'>
-            <div class='image image_filter_green' :style="'background-image:url('+selected.photos[0].url+');'">
+        <div class='header' v-if="!disable_simple_header">
+            <div class='image image_filter_green' v-if="place && place.photos.length >= 1"
+                 :style="'background-image:url('+place.photos[0].url+');'">
                 <div class='container'>
-                    <div class='title'> {{ selected.name }} </div>
+                    <div class='title'> {{ place.name }} </div>
                 </div>
             </div>
         </div>
+
+        <Carousel :photos="place.photos" :title="place.name" />
 
         <div class='container mt-4 mb-5'>
             <div class='row'>
                 <div class='col-xs-12 col-md-6'>
                     <h2> Property Information </h2>
 
-                    <img :src='img.url' v-for="(img, i) in place.photos" v-if="loaded"
+                    <img :src='img.url' v-for="(img, i) in place.photos" v-if="false"
                          :key="'_image_' + i" style='width: 100%; height: auto;' />
                 </div>
                 <div class='col-xs-12 col-md-6'>
@@ -39,6 +42,7 @@ export default {
 
     data(){ return {
         title: 'Selected Property for booking In',
+        disable_simple_header: true, // This DOM Element is one way of doing it in a simple way
         placeid: false,
         place: false,
         loaded: false,
@@ -84,6 +88,7 @@ export default {
 
 <style lang="scss">
   .header {
+      min-height: 400px;
 
       .image {
           position: relative;

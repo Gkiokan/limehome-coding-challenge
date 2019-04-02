@@ -9,6 +9,7 @@ import LimeHomeLoader from './LimeHomeLoader'
 import DebugObject from './DebugObject'
 import PlacesList from './PlacesList'
 import PlacesCard from './PlacesCard'
+import Carousel from './Carousel'
 
 // Components that are registered globaly.
 [
@@ -25,6 +26,7 @@ import PlacesCard from './PlacesCard'
   LimeHomeLoader,
   PlacesList,
   PlacesCard,
+  Carousel,
 ].forEach(Component => {
   Vue.component(Component.name, Component)
 })
