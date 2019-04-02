@@ -1,12 +1,29 @@
 <template>
   <div class='page get-started'>
 
-      <div class='maps wrapper' :class="{ gainAccess }">
+      <div class='maps wrapper' :class="{ gainAccess }" v-if="!disableMap">
       <div class='row no-gutters'>
         <div class='col'>
           <div class='map'>
 
-              <LimeHomeLoader :absolute="true" />
+              <LimeHomeLoader :absolute="true" v-if="!gainAccess"/>
+
+              <GmapMap v-if="gainAccess"
+                :center="{ lat:location.lang, lng:location.long }"
+                :options="mapOptions"
+                :zoom="14"
+                map-type-id_off="terrain"
+                style="width: 100%; height: 500px"
+              >
+                <GmapMarker
+                  v-for="(m, index) in markers"
+                  :key="index"
+                  :position="m.position"
+                  :clickable="true"
+                  :draggable="true"
+                  @click="center=m.position"
+                />
+              </GmapMap>
 
           </div>
         </div>
@@ -17,7 +34,14 @@
       <div class='container mt-4 mb-5'>
 
           <card :title="'List of Properties'">
-            ...
+            <div class='btn btn-success' v-if="!loaded" @click="getPlaces"> Load Places now! </div>
+
+            <div class='places'>
+                <div class='place' v-for="(place, i) in places" :key="'_place_' + i">
+                    <pre>{{ place }}</pre>
+                    <hr>
+                </div>
+            </div>
           </card>
 
       </div>
@@ -26,6 +50,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
     middleware: 'guest',
     layout: 'full',
@@ -36,6 +62,10 @@ export default {
 
     data(){
       return {
+          disableMap: false,
+          autoloadPlaces: true,
+          loaded: false,
+
           location: {
               lang: '',
               long: '',
@@ -43,6 +73,21 @@ export default {
           position: null,
           gainAccess: false,
           permissionForGeolocation: '',
+
+          mapOptions: {
+             zoomControl: true,
+             mapTypeControl: false,
+             scaleControl: false,
+             streetViewControl: false,
+             rotateControl: false,
+             fullscreenControl: true,
+             disableDefaultUi: false
+           },
+
+          request: null,
+          places: [],
+          markers: [],
+          center: false,
       }
     },
 
@@ -82,6 +127,9 @@ export default {
 
             this.location.lang = r.coords.latitude
             this.location.long = r.coords.longitude
+
+            if(this.autoloadPlaces)
+            this.getPlaces()
         },
 
         getCurrentPositionFailed(e){
@@ -89,7 +137,33 @@ export default {
             console.log(e)
         },
 
+        getPlaces(){
+            console.log('loading places')
+            axios.get('/api/getPlaces')
+                  .then( r => {
+                      this.loaded  = true
+                      this.request = r.data
+                      this.places  = r.data.places
+                      this.markers = r.data.markers
+                      console.log(r)
 
+                      // this.setTestMarkers()
+                  })
+        },
+
+        setTestMarkers(){
+          this.markers = [
+            {
+              position: { lat: this.location.lang, lng: this.location.long }
+            },
+            {
+              position: { lat: 48.1351253, lng: 11.5819805 }
+            },
+            {
+              position: { lat: 48.1118842, lng: 11.5474643 }
+            },
+          ]
+        }
 
     }
 

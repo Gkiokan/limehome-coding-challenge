@@ -11,6 +11,10 @@ class Places extends Controller
 
     public $requestURL = '';
     public $response   = null;
+    public $places     = [];
+    public $markers    = [];
+
+    public static $AutoMapPlacesMarkers = true;
 
     public $defaultParameter = [
         'location'  => null, // '48.11104280000001,11.5491273',
@@ -34,12 +38,57 @@ class Places extends Controller
     }
 
 
-    public function getNearBy(){
+    public function getResponse(){
         // simplest way of handling requests in php
         // could be done with guzzle for deepter Error handling and stuff
         $this->response = $response = json_decode( file_get_contents($this->requestURL) );
 
+        if(self::$AutoMapPlacesMarkers):
+            $this->mapPlaces();
+            $this->mapMarkers();
+        endif;
+
         return $response;
+    }
+
+
+    public function getPlaces(){
+        return $this->places;
+    }
+
+    public function getMarkers(){
+        return $this->markers;
+    }
+
+
+    public function mapPlaces(){
+        if(!$this->response) return "NO_RESPONSE_FOUND";
+
+        if($this->response->results):
+            $this->places = $this->response->results;
+        endif;
+
+        return $this->places;
+    }
+
+
+    public function mapMarkers(){
+        if(!$this->response->results) return "NO_PLACES_FOUND";
+
+        $patchedMarkers = [];
+
+        if( is_array($this->response->results))
+        foreach($this->response->results as $place):
+            $temp = [];
+            $temp['position']['lat'] = $place->geometry->location->lat;
+            $temp['position']['lng'] = $place->geometry->location->lng;
+
+            $patchedMarkers[] = $temp;
+        endforeach;
+
+        $this->markers = $patchedMarkers;
+
+        return $this->markers;
     }
 
 }

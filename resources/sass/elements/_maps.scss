@@ -21,6 +21,7 @@
 
 
     .map {
+        position: relative; z-index: 15;
         height: 500px;
         background: darkgray;
         transition: all .6s;

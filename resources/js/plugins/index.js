@@ -1,3 +1,5 @@
 import './axios'
 import './fontawesome'
+// import './vue-googlemaps'
+import './vue2-google-maps'
 import 'bootstrap'

@@ -15,13 +15,19 @@ class GooglePlaces extends Controller
 
         $gp = new Google\Places($args);
 
-        $places = $gp->getNearBy();
+        $response = $gp->getResponse();
+        $markers  = $gp->getMarkers();
+        $places   = $gp->getPlaces();
 
-        return response()->json($places);
+        return response()->json([
+            'response'  => $response,
+            'places'    => $places,
+            'markers'   => $markers,
+        ]);
     }
 
 
-    public function doSomethingWithPlacesAsArray($places, $skip = false){
+    public function doSomethingWithPlaces($places, $skip = false){
         if($skip) return $places;
 
         if( is_array($places))
