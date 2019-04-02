@@ -10,26 +10,47 @@
         </div>
 
         <div class='container mt-4 mb-5'>
-            <h2> Booking </h2>
+            <div class='row'>
+                <div class='col-xs-12 col-md-6'>
+                    <h2> Property Information </h2>
 
+                    ...
+                </div>
+                <div class='col-xs-12 col-md-6'>
+                    <h3> Booking </h3>
 
+                    ...
+                </div>
+            </div>
+            <pre>{{ placeid }}</pre>
+            <pre>{{ place }}</pre>
         </div>
+
     </div>
 </template>
 
 <script>
 import { get, sync, call } from 'vuex-pathify'
+import axios from 'axios'
 
 export default {
     layout: 'full',
 
     data(){ return {
-        title: 'Selected Property for booking In'
+        title: 'Selected Property for booking In',
+        placeid: false,
+        place: false,
     }},
 
     mounted(){
         if(!this.selected)
           this.$router.push({ name: 'get-started' })
+
+        if(this.$route.params.id){
+            this.placeid = this.$route.params.id
+            console.log(':: Place ID has been set to ' + this.placeid)
+            this.getPlace()
+        }
     },
 
     computed: {
@@ -40,7 +61,20 @@ export default {
     },
 
     methods: {
+        getPlace(){
+            if(!this.placeid){
+                console.log(':: NO PLACE ID FOUND!')
+                return
+            }
 
+            console.log(':: Request Place Information by ID ' + this.placeid)
+            axios.get('/api/getPlace/' + this.placeid)
+                 .then( r => {
+                      console.log(':: Place Object found')
+                      console.log(r.data.response)
+                      this.place = r.data.response
+                 })
+        }
     }
 }
 </script>

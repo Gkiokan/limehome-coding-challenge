@@ -38,5 +38,5 @@ Route::group(['middleware' => 'guest:api'], function () {
 Route::group(['middleware'  => 'guest'], function(){
 
     Route::get('getPlaces', 'GooglePlaces@index')->name('google.getPlaces');
-
+    Route::get('getPlace/{id}', 'GooglePlaces@getPlaceById')->name('google.getPlaceById');
 });

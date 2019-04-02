@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class GooglePlaces extends Controller
 {
 
+    // get all properties
     public function index(Request $request){
         // specify Places API Parameters here as an array
         // https://developers.google.com/places/web-service/search#PlaceSearchRequests
@@ -29,6 +30,19 @@ class GooglePlaces extends Controller
     }
 
 
+    // get response for place id
+    public function getPlaceById(Request $request, $id){
+        $place = new Google\Place($id);
+        $response = $place->getResponse();
+
+        return response()->json([
+          'placeid'   => $id,
+          'response'  => $response
+        ]);
+    }
+
+
+    // for later usage, just stay there
     public function doSomethingWithPlaces($places, $skip = false){
         if($skip) return $places;
 
