@@ -6,6 +6,7 @@ import Checkbox from './Checkbox'
 import { HasError, AlertError, AlertSuccess } from 'vform'
 
 import LimeHomeLoader from './LimeHomeLoader'
+import PlacesList from './PlacesList'
 
 
 // Components that are registered globaly.
@@ -17,7 +18,10 @@ import LimeHomeLoader from './LimeHomeLoader'
   HasError,
   AlertError,
   AlertSuccess,
-  LimeHomeLoader
+
+  // custom components
+  LimeHomeLoader,
+  PlacesList
 ].forEach(Component => {
   Vue.component(Component.name, Component)
 })

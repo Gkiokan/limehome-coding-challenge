@@ -41,6 +41,8 @@
 
       <div class='container mt-4 mb-5'>
 
+          <PlacesList :places="places" />
+
           <card :title="'List of Properties'">
             <div class='btn btn-success' v-if="!loaded" @click="getPlaces"> Load Places now! </div>
 
