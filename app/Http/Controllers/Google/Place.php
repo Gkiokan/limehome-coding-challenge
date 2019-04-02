@@ -31,11 +31,21 @@ class Place extends Controller
     }
 
 
+    // get Response and map the photos to url
     public function getResponse(){
         $this->response = json_decode( file_get_contents($this->placeURL) );
+
+        $this->mapPhotos();
 
         return $this->response;
     }
 
+
+    // map the response with all the url codes, love the recursivly
+    // usability of Photo Class here, less code, more effective 
+    public function mapPhotos(){
+        if(is_array($this->response->result->photos))
+        $this->response->result = Photo::mapAllPhotosURLInPlace($this->response->result);
+    }
 
 }
