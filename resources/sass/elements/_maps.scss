@@ -1,0 +1,29 @@
+.maps.wrapper {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute; z-index: 12;
+        top: 0; right: 0; bottom: 0; left: 0;
+        background: #000;
+        opacity: .6;
+        transition: all .6s;
+    }
+
+    &.gainAccess {
+        height: auto;
+        opacity: .8;
+
+        &:before {
+            opacity: 0;
+        }
+    }
+
+
+    .map {
+        height: 500px;
+        background: darkgray;
+        transition: all .6s;
+    }
+
+}

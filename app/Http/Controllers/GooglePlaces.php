@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class GooglePlaces extends Controller
 {
 
-    public function index(){
+    public function index(Request $request){
         $args = [
             'location'  => '48.11104280000001,11.5491273',
             'radius'    => 1500
