@@ -10,6 +10,7 @@ import DebugObject from './DebugObject'
 import PlacesList from './PlacesList'
 import PlacesCard from './PlacesCard'
 import Carousel from './Carousel'
+import SimplePlaceHeader from './SimplePlaceHeader'
 
 // Components that are registered globaly.
 [
@@ -27,6 +28,7 @@ import Carousel from './Carousel'
   PlacesList,
   PlacesCard,
   Carousel,
+  SimplePlaceHeader,
 ].forEach(Component => {
   Vue.component(Component.name, Component)
 })

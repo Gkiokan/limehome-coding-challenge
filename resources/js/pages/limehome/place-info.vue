@@ -1,16 +1,8 @@
 <template lang="html">
     <div class='page placeinfo'>
 
-        <div class='header' v-if="!disable_simple_header">
-            <div class='image image_filter_green' v-if="place && place.photos.length >= 1"
-                 :style="'background-image:url('+place.photos[0].url+');'">
-                <div class='container'>
-                    <div class='title'> {{ place.name }} </div>
-                </div>
-            </div>
-        </div>
-
-        <Carousel :photos="place.photos" :title="place.name" />
+        <SimplePlaceHeader :place="place" v-if="simple_header" />
+        <Carousel :photos="place.photos" :title="place.name" v-if="!simple_header"/>
 
         <div class='container mt-4 mb-5'>
             <div class='row'>
@@ -42,7 +34,7 @@ export default {
 
     data(){ return {
         title: 'Selected Property for booking In',
-        disable_simple_header: true, // This DOM Element is one way of doing it in a simple way
+        simple_header: false, // choose between simple Header or BS4 Carousel
         placeid: false,
         place: false,
         loaded: false,
@@ -87,36 +79,6 @@ export default {
 </script>
 
 <style lang="scss">
-  .header {
-      min-height: 400px;
 
-      .image {
-          position: relative;
-          height: 400px;
-          padding-bottom: 0px; // 56.25%; // 16:9 format
-
-          background: center center no-repeat;
-          background-size: cover;
-          transition: all .6s;
-          box-shadow: 0px 0px 15px 0px rgba(0,0,0,.5);
-
-          &:after {
-              z-index: 5;
-          }
-
-          .container {
-              position: absolute;
-              background: rgba(0,0,0,.8);
-              bottom: 0; left: 0; right: 0;
-              z-index: 10;
-          }
-      }
-
-      .title {
-          font-size: 50px;
-          font-weight: 100;
-          color: #ffff;
-      }
-  }
 
 </style>
