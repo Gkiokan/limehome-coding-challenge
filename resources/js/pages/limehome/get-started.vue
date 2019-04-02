@@ -44,6 +44,7 @@
           <PlacesList :places="places"  v-if="show == 'list'" />
           <PlacesCard :places="places" v-if="show == 'card'" />
 
+          <DebugObject :object="places" :each="false" v-if="places.length > 0 && showDebug"/>
       </div>
 
   </div>
@@ -63,6 +64,7 @@ export default {
     data(){
       return {
           show: 'list',
+          showDebug: false,
           disableMap: false,
           autoloadPlaces: true,
           current_icon_src: '/current_location.png',

@@ -6,6 +6,7 @@ import Checkbox from './Checkbox'
 import { HasError, AlertError, AlertSuccess } from 'vform'
 
 import LimeHomeLoader from './LimeHomeLoader'
+import DebugObject from './DebugObject'
 import PlacesList from './PlacesList'
 import PlacesCard from './PlacesCard'
 
@@ -20,6 +21,7 @@ import PlacesCard from './PlacesCard'
   AlertSuccess,
 
   // custom components
+  DebugObject,
   LimeHomeLoader,
   PlacesList,
   PlacesCard,
