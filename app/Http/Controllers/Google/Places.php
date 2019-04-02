@@ -15,6 +15,7 @@ class Places extends Controller
     public $markers    = [];
 
     public static $AutoMapPlacesMarkers = true;
+    public static $AutoMapPhotoURLs = true;
 
     public $defaultParameter = [
         'location'  => null, // '48.11104280000001,11.5491273',
@@ -50,11 +51,21 @@ class Places extends Controller
         // could be done with guzzle for deepter Error handling and stuff
         $this->response = $response = json_decode( file_get_contents($this->requestURL) );
 
+
+        // Modify Photo Image URL
+        if(self::$AutoMapPhotoURLs):
+            if(is_array($this->places))
+            foreach($this->places as $place)
+                $place = $this->mapAllPhotosURLInPlace($place);
+        endif;
+
+        // Create public Objects to get them later with the getters
         if(self::$AutoMapPlacesMarkers):
             $this->mapPlaces();
             $this->mapMarkers();
         endif;
 
+        // in any case, just return the response
         return $response;
     }
 
@@ -62,16 +73,40 @@ class Places extends Controller
     /*
         mapPlaces
         -----------------------------------------------
-        Get the places out of the response and put it in the Class
+        Get the places out of the response and put it in the Class,
+        so we can get it easy with $class->getPlaces()
     */
     public function mapPlaces(){
         if(!$this->response) return "NO_RESPONSE_FOUND";
 
         if($this->response->results):
             $this->places = $this->response->results;
+
+            // if any validation would be needen,
+            // this is a good place to loop though the results
         endif;
 
         return $this->places;
+    }
+
+
+    /*
+        mapAllPhotosURLInPlace
+        -------------------------
+        This function maps the photo array of the Google places to
+        a final image URL which can be directly used. Due the fact, that google
+        allows multiple Photos to be here, we loop though the photos array and
+        update the Object and return the mapped state.
+    */
+    public function mapAllPhotosURLInPlace($place=null){
+        if(!$place) return;
+        $x=0;
+
+        if(is_array($place->photos))
+        foreach($place->photos as $photo)
+          $photo->url = Photo::getURLFromPlace($place);
+
+        return $place;
     }
 
 
@@ -94,8 +129,11 @@ class Places extends Controller
             $temp['name']            = $place->name;
             $temp['location']['lat'] = $place->geometry->location->lat;
             $temp['location']['lng'] = $place->geometry->location->lng;
-            $temp['photo']['url']    = Photo::getURLFromPlace($place); // $place->photos[0]->photo_reference
-            $temp['photo']['ref']  = $place->photos[0]->photo_reference;
+            $temp['photos']          = $place->photos;
+
+            // Alternatively you could map specific Images just targeting the markers
+            // $temp['photo']['url']    = Photo::getURLFromPlace($place);
+            // $temp['photo']['ref']  = $place->photos[0]->photo_reference;
 
             $patchedMarkers[] = $temp;
         endforeach;
