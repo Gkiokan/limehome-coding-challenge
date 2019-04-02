@@ -15,6 +15,10 @@
                 map-type-id_off="terrain"
                 style="width: 100%; height: 500px"
               >
+                <GmapMarker
+                  :icon="current_icon_src"
+                  :position="{ lat: location.lang, lng: location.long }"
+                />
                 <gmap-cluster>
                     <GmapMarker
                       v-for="(m, index) in markers"
@@ -68,6 +72,7 @@ export default {
       return {
           disableMap: false,
           autoloadPlaces: true,
+          current_icon_src: '/current_location.png',
           loaded: false,
 
           location: {
