@@ -58,6 +58,7 @@ export default {
             console.log(":: Selecting Place " + place.place_id + ' | ' + place.name)
             console.log(place)
             this.$store.dispatch('place/setSelected', place)
+            this.$router.push({ name: 'place-info', params: { id: place.place_id } })
         }
     }
 }

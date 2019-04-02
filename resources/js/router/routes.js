@@ -32,6 +32,11 @@ export default [
       name: 'get-started',
       component: () => import('~/pages/limehome/get-started').then( m => m.default || m)
   },
+  {
+      path: '/place-info/:id',
+      name: 'place-info',
+      component: () => import('~/pages/limehome/place-info').then( m => m.default || m)
+  },
 
   { path: '*', component: NotFound }
 ]
