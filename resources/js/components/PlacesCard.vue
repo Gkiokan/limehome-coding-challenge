@@ -10,7 +10,7 @@
                     <div class='card-img-top image' :class="image_filter_class" :style="'background-image: url(' + place.photos[0].url + ');'">
                       <div class='open_now' v-if="place.opening_hours"> open now </div>
                       <div class='stars'>
-                          <template v-for="n in place.rating | roundUp">
+                          <template v-for="n in place.rating | roundUp">
                             <fa icon="star" color="gold" />
                           </template>
                       </div>
@@ -23,7 +23,7 @@
 
                         <div class='actions'>
                             <div class='btn btn-info btn-xs btn-sm'> <fa icon="eye" /> Details </div>
-                            <div class='btn btn-success btn-xs btn-sm'> <fa icon="door-open" /> Check-In </div>
+                            <div class='btn btn-success btn-xs btn-sm' @click="selectPlace(place)"> <fa icon="door-open" /> Check-In </div>
                         </div>
                     </div>
                 </div>
@@ -40,6 +40,7 @@ export default {
     props: ['places'],
 
     data(){ return {
+        roundUp: false,
         show_images: true,
         image_filter_class: 'image_filter_red', // choose between image_filter_red, image_filter_green, image_filter_pink
     }},
@@ -52,8 +53,12 @@ export default {
         }
     },
 
-    mounted(){
-
+    methods: {
+        selectPlace(place){
+            console.log(":: Selecting Place " + place.place_id + ' | ' + place.name)
+            console.log(place)
+            this.$store.dispatch('place/setSelected', place)
+        }
     }
 }
 </script>
