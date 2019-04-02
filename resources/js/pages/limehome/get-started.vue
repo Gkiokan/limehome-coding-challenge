@@ -63,7 +63,7 @@ export default {
 
     data(){
       return {
-          show: 'list',
+          show: 'card',
           showDebug: false,
           disableMap: false,
           autoloadPlaces: true,
