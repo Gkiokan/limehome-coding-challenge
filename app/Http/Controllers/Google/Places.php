@@ -38,6 +38,13 @@ class Places extends Controller
     }
 
 
+    /*
+        getResponse
+        -------------
+        Handles the Places API Request and returns the response.
+        Furthermore it maps the places and markers directly whenever
+        the flag self::$AutoMapPlacesMarkers is set.
+    */
     public function getResponse(){
         // simplest way of handling requests in php
         // could be done with guzzle for deepter Error handling and stuff
@@ -52,15 +59,11 @@ class Places extends Controller
     }
 
 
-    public function getPlaces(){
-        return $this->places;
-    }
-
-    public function getMarkers(){
-        return $this->markers;
-    }
-
-
+    /*
+        mapPlaces
+        -----------------------------------------------
+        Get the places out of the response and put it in the Class
+    */
     public function mapPlaces(){
         if(!$this->response) return "NO_RESPONSE_FOUND";
 
@@ -72,6 +75,13 @@ class Places extends Controller
     }
 
 
+    /*
+        mapMarkers
+        -----------------------------------------------
+        Mapping Markers out of the Places.
+        This method is intentionally created for creating an specific
+        array of Objects for the Markers to be build on the Map
+    */
     public function mapMarkers(){
         if(!$this->response->results) return "NO_PLACES_FOUND";
 
@@ -80,14 +90,30 @@ class Places extends Controller
         if( is_array($this->response->results))
         foreach($this->response->results as $place):
             $temp = [];
-            $temp['position']['lat'] = $place->geometry->location->lat;
-            $temp['position']['lng'] = $place->geometry->location->lng;
+            // $temp['place'] = $place;
+            $temp['name']            = $place->name;
+            $temp['location']['lat'] = $place->geometry->location->lat;
+            $temp['location']['lng'] = $place->geometry->location->lng;
+            $temp['photo']['url']    = Photo::getURLFromPlace($place); // $place->photos[0]->photo_reference
+            $temp['photo']['ref']  = $place->photos[0]->photo_reference;
 
             $patchedMarkers[] = $temp;
         endforeach;
 
         $this->markers = $patchedMarkers;
 
+        return $this->markers;
+    }
+
+
+    /*
+        simple getter
+    */
+    public function getPlaces(){
+        return $this->places;
+    }
+
+    public function getMarkers(){
         return $this->markers;
     }
 

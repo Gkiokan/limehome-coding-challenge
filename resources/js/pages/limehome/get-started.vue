@@ -15,14 +15,18 @@
                 map-type-id_off="terrain"
                 style="width: 100%; height: 500px"
               >
-                <GmapMarker
-                  v-for="(m, index) in markers"
-                  :key="index"
-                  :position="m.position"
-                  :clickable="true"
-                  :draggable="true"
-                  @click="center=m.position"
-                />
+                <gmap-cluster>
+                    <GmapMarker
+                      v-for="(m, index) in markers"
+                      :key="index"
+                      :title="m.name"
+                      :icon_off="m.icon"
+                      :position="m.location"
+                      :clickable="true"
+                      :draggable="false"
+                      @click="clickOnMarker(m)"
+                    />
+                </gmap-cluster>
               </GmapMap>
 
           </div>
@@ -163,6 +167,12 @@ export default {
               position: { lat: 48.1118842, lng: 11.5474643 }
             },
           ]
+        },
+
+        clickOnMarker(marker){
+            console.log(':: Clicked on Marker')
+            console.log(marker)
+
         }
 
     }

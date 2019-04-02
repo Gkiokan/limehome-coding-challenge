@@ -38,5 +38,5 @@ Route::group(['middleware' => 'guest:api'], function () {
 Route::group(['middleware'  => 'guest'], function(){
 
     Route::get('getPlaces', 'GooglePlaces@index')->name('google.getPlaces');
-    
+
 });
