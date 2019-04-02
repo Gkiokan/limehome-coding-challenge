@@ -14,7 +14,8 @@
                 <div class='col-xs-12 col-md-6'>
                     <h2> Property Information </h2>
 
-                    ...
+                    <img :src='img.url' v-for="(img, i) in place.photos" v-if="loaded"
+                         :key="'_image_' + i" style='width: 100%; height: auto;' />
                 </div>
                 <div class='col-xs-12 col-md-6'>
                     <h3> Booking </h3>
@@ -40,6 +41,7 @@ export default {
         title: 'Selected Property for booking In',
         placeid: false,
         place: false,
+        loaded: false,
     }},
 
     mounted(){
@@ -72,7 +74,8 @@ export default {
                  .then( r => {
                       console.log(':: Place Object found')
                       console.log(r.data.response)
-                      this.place = r.data.response
+                      this.place = r.data.response.result
+                      this.loaded = true
                  })
         }
     }
