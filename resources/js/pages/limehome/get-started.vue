@@ -142,7 +142,7 @@ export default {
         },
 
         getPlaces(){
-            console.log('loading places')
+            console.log(':: Loading places though Backend API /api/getPlaces')
             axios.get('/api/getPlaces')
                   .then( r => {
                       this.loaded  = true
