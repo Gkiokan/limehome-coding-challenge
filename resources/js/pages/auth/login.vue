@@ -55,6 +55,7 @@
 <script>
 import Form from 'vform'
 import LoginWithGithub from '~/components/LoginWithGithub'
+import { get, sync, call } from 'vuex-pathify'
 
 export default {
   middleware: 'guest',
@@ -68,12 +69,27 @@ export default {
   },
 
   data: () => ({
+    callback: false,
+    placeid: "",
     form: new Form({
       email: '',
       password: ''
     }),
     remember: false
   }),
+
+  mounted(){
+
+      if(this.$route.name == 'login.withCB'){
+          this.callback = true
+          this.placeid  = this.$route.params.id
+      }
+
+  },
+
+  computed: {
+      selectedPlace : get('place/selected')
+  },
 
   methods: {
     async login () {
@@ -89,8 +105,11 @@ export default {
       // Fetch the user.
       await this.$store.dispatch('auth/fetchUser')
 
-      // Redirect home.
-      this.$router.push({ name: 'home' })
+      if(this.callback == false)
+        this.$router.push({ name: 'home' })
+      else
+        this.$router.push({ name: 'place-info', params: { id: this.placeid } })
+
     }
   }
 }

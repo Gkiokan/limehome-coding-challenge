@@ -40,7 +40,7 @@
                     <template v-else>
                         <h5 class='mb-3'> Login required </h5>
                         <div class='alert alert-info' style='border-radius:0px;'>
-                            Please <router-link :to="{ name: 'login' }">login</router-link> to book this property.
+                            Please <router-link :to="{ name: 'login.withCB', params: { id: placeid } }">login</router-link> to book this property.
                         </div>
                     </template>
 
@@ -117,7 +117,7 @@ export default {
             let hrs = "";
             if(this.place.opening_hours)
               if(this.place.opening_hours.formatted_weekday_text_html)
-                hrs = place.opening_hours.formatted_weekday_text_html
+                hrs = this.place.opening_hours.formatted_weekday_text_html
 
             if(!this.place.opening_hours)
               this.place.opening_hours = { formatted_weekday_text_html : hrs}

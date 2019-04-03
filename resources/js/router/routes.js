@@ -14,6 +14,7 @@ export default [
   { path: '/', name: 'welcome', component: Welcome },
 
   { path: '/login', name: 'login', component: Login },
+  { path: '/login/withCB/{id}', name: 'login.withCB', component: Login },
   { path: '/register', name: 'register', component: Register },
   { path: '/password/reset', name: 'password.request', component: PasswordEmail },
   { path: '/password/reset/:token', name: 'password.reset', component: PasswordReset },

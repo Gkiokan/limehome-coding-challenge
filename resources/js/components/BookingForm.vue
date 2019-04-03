@@ -107,7 +107,7 @@ export default {
 
   mounted(){
       if(!this.user) return
-      
+
       this.mapUserData()
       this.mapData()
   },
