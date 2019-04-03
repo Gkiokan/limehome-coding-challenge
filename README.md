@@ -31,8 +31,11 @@ While the 2nd Job was to post fake bookings of a user specified to a property,
 there was the 3rd option to return bookings of a specific user which only can  
 work with a User Management System. For this I've used the Laravel Basic auth Process.  
 So only a logged in user can book something. I lowered the complexity of the needen password  
-for registering, so this is a ease. But you have to fill in your bare minimum of Information  
-of firstname, lastname and mobile number.  
+for registering, so this is a ease to create an account go on. But you have to fill in your  
+bare minimum of Information  of firstname, lastname and mobile number.  
+This only allows the current user to book something specific for this name only,  
+I've expanded this feature to enter guest information on booking. In example I can book  
+something for someoneelse or even make a bulk booking, which can be easly adapted with the guest feature.   
 
 
 

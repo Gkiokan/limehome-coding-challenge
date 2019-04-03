@@ -17,4 +17,8 @@ class Booking extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function guest(){
+        return $this->hasMany(Guest::class);
+    }
+
 }
