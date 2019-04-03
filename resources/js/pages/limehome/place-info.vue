@@ -35,7 +35,15 @@
                 <div class='col-xs-12 col-md-6'>
                     <h2> Booking </h2>
 
-                    <BookingForm :id="placeid" :place="place" />
+                    <BookingForm :id="placeid" :place="place" v-if="user "/>
+
+                    <template v-else>
+                        <h5 class='mb-3'> Login required </h5>
+                        <div class='alert alert-info' style='border-radius:0px;'>
+                            Please <router-link :to="{ name: 'login' }">login</router-link> to book this property.
+                        </div>
+                    </template>
+
                 </div>
             </div>
         </div>
@@ -73,6 +81,7 @@ export default {
 
     computed: {
         // selected: get('place/selected')
+        user: get('auth/user')
     },
 
     methods: {
