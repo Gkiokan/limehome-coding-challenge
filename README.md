@@ -17,6 +17,7 @@ Add valid mySQL credentials
 You may need generate a new Application Key with ```php artisan key:generate```  
 You may need generate a new JWT Secret Key with ```php artisan jwt:secret```  
 
+
 ## Ready to migrate
 Run database migration ```php artisan migrate```
 
@@ -34,3 +35,28 @@ work with a User Management System. For this I've used the Laravel Basic auth Pr
 So only a logged in user can book something. I lowered the complexity of the needen password  
 for registering, so this is a ease. But you have to fill in your bare minimum of Information  
 of firstname, lastname and mobile number.  
+
+
+
+## Notes
+Actually I was suprised about the new policy that google runs with the paid api keys only.  
+It took me a while to search for alternatives and then came back to google due the broad  
+way of supporting so much stuff.  
+
+After that the Google Place Controller took a while to make it clear, structed and recursive usable.  
+A good example is the method for mapping all the photos within a place Object, this is awesome.  
+Also I thought about additional data mapping, filtering or validating before the response goes
+out to the frontend. There are several ways of doing it, I have made some of them in my code as you can see.  
+
+Without the research and configuration for the Google API I've used aprox. 3 hours on the GooglePlaceController.
+On top of that I spend time on doing coding clean and building the frontend up more then required.
+
+The Google Map Markers have a click event listener, which is currently not used but I have planed
+that on click a little Overlay goes over the map and describes the nessesary Information about the property.  
+
+There are two components to list the places in response, currently they are displayed as cards but  
+there is also a list component already prepared. Checkout the get-started view and change the data  
+value of show from 'card' to 'list', which will give you a straight forward table.  
+  
+Also the frontend have a Profile Backend which needs to be filled for a better usability for the user  
+while booking properties. A little overview area about profile information and thats it.  
