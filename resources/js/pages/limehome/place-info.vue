@@ -4,6 +4,13 @@
         <SimplePlaceHeader :place="place" v-if="simple_header" />
         <Carousel :photos="place.photos" :title="place.name" v-if="!simple_header"/>
 
+        <div class='container' style='padding-left: 0;'>
+            <div class='btn' @click="$router.back()"
+                 style='background: rgba(0,0,0,.8); color: white; border-radius: 0px 0px 2px 2px;'>
+                <fa icon="chevron-left" class='mr-1' /> Back
+            </div>
+        </div>
+
         <div class='container mt-4 mb-5' v-if="place">
             <div class='row'>
                 <div class='col-xs-12 col-md-6'>
