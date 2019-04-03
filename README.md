@@ -16,10 +16,8 @@ Add a valid Google Maps API key in the ```.env``` file
 Add valid mySQL credentials  
 You may need generate a new Application Key with ```php artisan key:generate```  
 You may need generate a new JWT Secret Key with ```php artisan jwt:secret```  
-
-
-## Ready to migrate
 Run database migration ```php artisan migrate```
+Serve the project with ```valet``` on the project root or mount ```htdocs``` of your webserver to ```/public```
 
 
 ## Things to consider
@@ -29,7 +27,7 @@ to determine the users lang and long values. After that passing them to google m
 Depending on the users location the GooglePlaceController requests the google place api for
 all near properties within 1500m. The parameters can be setup in the GooglePlaceController.  
 
-Wile the 2nd Job was to post fake bookings of a user specified to a property,  
+While the 2nd Job was to post fake bookings of a user specified to a property,  
 there was the 3rd option to return bookings of a specific user which only can  
 work with a User Management System. For this I've used the Laravel Basic auth Process.  
 So only a logged in user can book something. I lowered the complexity of the needen password  
