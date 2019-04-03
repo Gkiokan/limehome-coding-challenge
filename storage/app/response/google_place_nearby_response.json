@@ -1,0 +1,977 @@
+{
+    "html_attributions": [],
+    "next_page_token": "CqQCFQEAACWojtnGTVZwACQ03cdIeWSgDhtlkYVKsSK7cSGbQtiSfX_ePQoW--9-yqv2gzCphFU-NBKq4BLT7gEe8Bk_53of1YxzQaH2By-Ejya2XNDo6PBohcQA_N1QDOf22pd8L-jsXhO_pVcEqOeupxgTHZBohVRMA-MhSbcfRszX3FkOViP080300MH9KTrytKOcJHgBQgSVUL6tEYPgIPaVjMs7L0ETEeVMl9viLOiFS6-xSMZ_OCkjveOFs6a_zOYWvs9jG__vgimVfMDZJrguc2lWeY5I_VzuvP6ywisqQIJX72lFCMdV_m1OV15HfdETdZmHsFGEKJ2tWhzUnJwEAYigJqh9eb4JFEeze-Yoj217KBOz2DM7rBpcu4QNDZBaSxIQsqsJL7DChWroPWvM6I22lRoUfVz8BUuIu13MfaWWyIIazD2lee8",
+    "results": [
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.1351253,
+                    "lng": 11.5819805
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.2482197,
+                        "lng": 11.7228755
+                    },
+                    "southwest": {
+                        "lat": 48.0616018,
+                        "lng": 11.360796
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+            "id": "412a4fdf5226b5e184d846ee48628269c86a5afe",
+            "name": "Munich",
+            "photos": [
+                {
+                    "height": 416,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/105625718516119167891/photos\">Miodrag Davidović</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAI4_ciqzvvPN32SNCfjid986lZi9I1dd5vhWsxeI_hiyADFe-HPInq8zUOqHcVERvkuvtxs5yICwpeAfpUrCgGnPZB2r2haX44DNXOfvuYytla04UArnnlYr8R2-NBjQqEhCsF0TAkoyoGsruLahZrJ1MGhRMN1jg5XmoJF3GBvqHT6cQUMaAGA",
+                    "width": 659
+                }
+            ],
+            "place_id": "ChIJ2V-Mo_l1nkcRfZixfUq4DAE",
+            "reference": "ChIJ2V-Mo_l1nkcRfZixfUq4DAE",
+            "scope": "GOOGLE",
+            "types": [
+                "locality",
+                "political"
+            ],
+            "vicinity": "Munich"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.1118842,
+                    "lng": 11.5474643
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.1133227802915,
+                        "lng": 11.5487969802915
+                    },
+                    "southwest": {
+                        "lat": 48.11062481970851,
+                        "lng": 11.5460990197085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "ad93f64d7831d719d60fde1bf4088956a540c3cc",
+            "name": "Leonardo Hotel München City West",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1600,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/110618533510945285289/photos\">Leonardo Hotel München City West</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAxuX_7yJLcysJysFMqWZF7WB-NnzIlM9u1uql0gyNbkXK8koiHWL1SB36h3qPZdi0GlCfrOPgrayj3F6q96dKYJ1YqIA5YHmAZQ0Bt5Fzs-aQHstLkHBiM_h8CQcJUutIEhCRtVlzwGBI9MGg-adFVsqNGhTtRbO_oyHEqxtdW1IFkBQozFb_HQ",
+                    "width": 2400
+                }
+            ],
+            "place_id": "ChIJm0eWLzHfnUcR9GU9eWxoiKE",
+            "plus_code": {
+                "compound_code": "4G6W+QX Munich, Germany",
+                "global_code": "8FWH4G6W+QX"
+            },
+            "rating": 4.1,
+            "reference": "ChIJm0eWLzHfnUcR9GU9eWxoiKE",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 564,
+            "vicinity": "Brudermühlstraße 33, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.11706100000001,
+                    "lng": 11.5384195
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.1183393802915,
+                        "lng": 11.5397684802915
+                    },
+                    "southwest": {
+                        "lat": 48.1156414197085,
+                        "lng": 11.5370705197085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "9fcbb7f0d1947336b06bf80740ea26aaa36d4f3e",
+            "name": "K+K Hotel am Harras München",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1534,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108805244858426733472/photos\">K+K Hotel am Harras München</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAenfA_iHOFw776FhDtla2-BUSbhCBQ7rpiFIGIM2q1f55SD2eaObJ0me_pqlocepkYX0oZ0CUrmTUumcYZ1KpZZNmOqih7jUMQB7ih9BSdtcB91QHayLz8tQJTaOhFjAjEhDI4CQxvavjdFRy-JgvLAh6GhS5aU17FmOEKTB54xL3BtbuaH-d_w",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJdeT2XsrYnUcRWw27ZBNBq6M",
+            "plus_code": {
+                "compound_code": "4G8Q+R9 Munich, Germany",
+                "global_code": "8FWH4G8Q+R9"
+            },
+            "rating": 4,
+            "reference": "ChIJdeT2XsrYnUcRWw27ZBNBq6M",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 419,
+            "vicinity": "Albert-Roßhaupter-Straße 4, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.10183,
+                    "lng": 11.54069
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.1031976302915,
+                        "lng": 11.5422348302915
+                    },
+                    "southwest": {
+                        "lat": 48.1004996697085,
+                        "lng": 11.5395368697085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "d622fd098933f7f460cfa86562a9816b44056650",
+            "name": "Hotel Galleria",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2048,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/101762573298564985466/photos\">Hotel Galleria</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA9ubIQ5eZSHFf2nEutRJQv5baf7mL6sp0qtHGHbFi4WN2vZ304aciULBFh87C4U1kjL4V2S4EjHqk8jCnIrp7C3OXwm_isDPzpKWCG4px3jGq-ewiwF22PAkQDrYjNnkpEhDINl0cVqhPOBXBmE_dorPAGhQqQ4puROESCXmZHBjnzLKPzSKA8Q",
+                    "width": 1536
+                }
+            ],
+            "place_id": "ChIJL1QXZCnfnUcRElwzANJBQEM",
+            "plus_code": {
+                "compound_code": "4G2R+P7 Munich, Germany",
+                "global_code": "8FWH4G2R+P7"
+            },
+            "rating": 2.8,
+            "reference": "ChIJL1QXZCnfnUcRElwzANJBQEM",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 194,
+            "vicinity": "Plinganserstraße 142, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.099449,
+                    "lng": 11.543455
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.1008299302915,
+                        "lng": 11.5444826802915
+                    },
+                    "southwest": {
+                        "lat": 48.0981319697085,
+                        "lng": 11.5417847197085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "c3f7abf336048d16c411e47633cdf4a096c494e3",
+            "name": "DJH Jugendherberge München-Park - HI Munich Park Youth Hostel",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 600,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/118301672044016338505/photos\">DJH Jugendherberge München-Park - HI Munich Park Youth Hostel</a>"
+                    ],
+                    "photo_reference": "CmRaAAAACkOoLj5v3lo0RCAgIrSRdf9FjTWIlQsErJSGM2f2uIBM5gSkTJ_FrIRtxNe0vvm2Io9gfPlZehAZHWMQUz7MnfdtGRouCd54o6jjtUJ7-wqLEXVmYSM-dyVd6peLQeaoEhAdSB3QlRkqSXHxegNc_H2eGhSBpzErFmV-xILTfn1nO6ClPmqu9A",
+                    "width": 800
+                }
+            ],
+            "place_id": "ChIJWxFrTyjfnUcRGqmQHzFtiTA",
+            "plus_code": {
+                "compound_code": "3GXV+Q9 Munich, Germany",
+                "global_code": "8FWH3GXV+Q9"
+            },
+            "rating": 3.9,
+            "reference": "ChIJWxFrTyjfnUcRGqmQHzFtiTA",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 264,
+            "vicinity": "Miesingstrasse 4, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.10914349999999,
+                    "lng": 11.5394372
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.1104977802915,
+                        "lng": 11.5409341802915
+                    },
+                    "southwest": {
+                        "lat": 48.1077998197085,
+                        "lng": 11.5382362197085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "b66b326add925b7a0f76d01587f28f03c556ea89",
+            "name": "Ambassador Parkhotel München",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1359,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/117087551135440337343/photos\">Ambassador Parkhotel München</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAhYLgCTgKe86RxMQERYJD3Y78olN5Ysj3gqjblyDDUz-r2sEQtxyed1RnZ22x0hXACxVKe_vb2xKTFF2JtHkZ47Gn81v_oYMVHSA81QwQ-VdmBk4sopv3LNozHnO96nUsEhAu2QvQU_cZxp561sH0mULqGhThkdrpsbvxK32QrbonYCtM2NPcmA",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJLRzIfy3fnUcRXGkf1KuS91E",
+            "plus_code": {
+                "compound_code": "4G5Q+MQ Munich, Germany",
+                "global_code": "8FWH4G5Q+MQ"
+            },
+            "rating": 3.6,
+            "reference": "ChIJLRzIfy3fnUcRXGkf1KuS91E",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 150,
+            "vicinity": "Plinganserstraße 102, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.117039,
+                    "lng": 11.5348273
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.11832253029149,
+                        "lng": 11.5361761302915
+                    },
+                    "southwest": {
+                        "lat": 48.11562456970849,
+                        "lng": 11.53347816970849
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "f49dcf0bd638fee175930b10a3377d3fe65eb66b",
+            "name": "Hotel Ambiance Rivoli",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 960,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114475657535333475911/photos\">Hotel Ambiance Rivoli</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAo18xU-8Na8OPH2TDW3G6Xvb2lRb-QGczSpAz9-nZgehhFvO-aiuegZ1GR-iT2SVDthlv4yVXC7Cr372GKbHkf23SkcOrvl6JHLAVOICh9HQ3fcyuLhABi5yGTBgIoAwZEhAgd2rBMkrskmTCFaRBG3ZqGhS_s1826YjqlMP49CjQ1hMCLJ4A4w",
+                    "width": 1216
+                }
+            ],
+            "place_id": "ChIJm8i9O8rYnUcRMtTCD6G31iE",
+            "plus_code": {
+                "compound_code": "4G8M+RW Munich, Germany",
+                "global_code": "8FWH4G8M+RW"
+            },
+            "rating": 4.1,
+            "reference": "ChIJm8i9O8rYnUcRMtTCD6G31iE",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 352,
+            "vicinity": "Albert-Roßhaupter-Straße 22, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.11393,
+                    "lng": 11.53347
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.11528253029149,
+                        "lng": 11.5349644302915
+                    },
+                    "southwest": {
+                        "lat": 48.1125845697085,
+                        "lng": 11.5322664697085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "33e6f2f8c05457815830fe27c50c9fd4b3576042",
+            "name": "Hotel Amenity Munich",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 810,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/109785538271648956539/photos\">Hotel Amenity München</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAxm3ZggPitHeYd0Nto-ic1PQG8x9hYppK1OegrixxWhEhMtFkC5oZRaz1ZoQ2Z_mZ82cOgOa60A_Y-OSeLpw1BjiyMAh0277XF3MplTfzrjBwRBWETdoyNNn94QXqDMrfEhCL65OpzQ9cOPf3Bkairk12GhTUduLD2VdrrCIuD1mxK9WgieY2pw",
+                    "width": 813
+                }
+            ],
+            "place_id": "ChIJiRCt98vYnUcRS-DvYFltXUk",
+            "plus_code": {
+                "compound_code": "4G7M+H9 Munich, Germany",
+                "global_code": "8FWH4G7M+H9"
+            },
+            "rating": 4.2,
+            "reference": "ChIJiRCt98vYnUcRS-DvYFltXUk",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 349,
+            "vicinity": "Passauerstraße 28, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.1184725,
+                    "lng": 11.5335003
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.11976053029149,
+                        "lng": 11.5351491802915
+                    },
+                    "southwest": {
+                        "lat": 48.11706256970849,
+                        "lng": 11.5324512197085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "5f505b77e5ecf13cfe86d56ca0b9b8ed2b39f063",
+            "name": "Carmen",
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/110659622121903411962/photos\">Steffen Panse</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAyCnsEnREzyuN5xFz98oD-4TQ97XN4ADzoWB1nvS1JbPmw168ANLEgzAbfemZ18cCMUGq6cgzojboHYhEaR1sgjEgsDNdQxPVCX9eq6iEAzZQgnE1dbJt4ApwMpMUAR11EhDPOK8q_BP0EXNDfrhy1mp1GhQUlxF59UYZzF7flA0_iVYaEDKsDw",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJOXQD-snYnUcRmVtiOMtgLBo",
+            "plus_code": {
+                "compound_code": "4G9M+9C Munich, Germany",
+                "global_code": "8FWH4G9M+9C"
+            },
+            "rating": 3.5,
+            "reference": "ChIJOXQD-snYnUcRmVtiOMtgLBo",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 316,
+            "vicinity": "Hansastraße 146, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.116705,
+                    "lng": 11.5443881
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.1182077302915,
+                        "lng": 11.5453737302915
+                    },
+                    "southwest": {
+                        "lat": 48.11550976970851,
+                        "lng": 11.5426757697085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "2a3ceb5309900aa8826803960b4b1fbd4c0e5f80",
+            "name": "Südbad - Munich",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 283,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/103596994422350680206/photos\">Ivan Belchev</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAjH5-wXLDzXi_1-Y7wAFFizBMd4wRrAxHampN8FeXGzB3cdzvQgZswh7wrjjc-bc1fwqW_Ke7NsnipcR5Gh_fidCRAwF5CocsloeAvjv3wLmfxrTFEPrCkahhHIbQkVWeEhCWiUWRmAjqeyn1kMxFRLkXGhTbuZmI0qgkI-Ye2bx8WD4aU2DLeA",
+                    "width": 425
+                }
+            ],
+            "place_id": "ChIJpXlfmTXfnUcRK3EHIubtLOE",
+            "plus_code": {
+                "compound_code": "4G8V+MQ Munich, Germany",
+                "global_code": "8FWH4G8V+MQ"
+            },
+            "rating": 4.1,
+            "reference": "ChIJpXlfmTXfnUcRK3EHIubtLOE",
+            "scope": "GOOGLE",
+            "types": [
+                "spa",
+                "health",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 623,
+            "vicinity": "Valleystraße 37, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.10642279999999,
+                    "lng": 11.5644541
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.10786958029149,
+                        "lng": 11.5655490802915
+                    },
+                    "southwest": {
+                        "lat": 48.1051716197085,
+                        "lng": 11.5628511197085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/worship_general-71.png",
+            "id": "f2ae766dbd97e3eaf50b3975eeaa25b0dd06822f",
+            "name": "Cathedral Maria Schutz and St. Andrew",
+            "photos": [
+                {
+                    "height": 1724,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/108384800242351786078/photos\">Gabriele Teofili</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAVj1MVRPCdj3kE1EqLGrZIYXpoCORpTcPQhgGORQKkzTva23JUy1ubezDZnCTJnJ2kb7zy1l3vsXGoK6z06e9vaUiJuwfVqtrAQZFE724W4nRzbmaJXmFvLG1YOlXPsdoEhBxUtiAHIEDlXAPKqYHu-rUGhS2gueexTho1eTpm50IxSkPKMU_YQ",
+                    "width": 2988
+                }
+            ],
+            "place_id": "ChIJazEKkRffnUcRvtLea2Njknw",
+            "plus_code": {
+                "compound_code": "4H47+HQ Munich, Germany",
+                "global_code": "8FWH4H47+HQ"
+            },
+            "rating": 4.9,
+            "reference": "ChIJazEKkRffnUcRvtLea2Njknw",
+            "scope": "GOOGLE",
+            "types": [
+                "church",
+                "place_of_worship",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 14,
+            "vicinity": "Schönstraße 55, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.1069356,
+                    "lng": 11.5457739
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.10829423029151,
+                        "lng": 11.5469072302915
+                    },
+                    "southwest": {
+                        "lat": 48.10559626970851,
+                        "lng": 11.5442092697085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "19510c4c430d55f6d7849378996bce9ffbd8f2dd",
+            "name": "DAV Kletter- und Boulderzentrum München-Süd",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1152,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/117822112885444222925/photos\">DAV Kletter- und Boulderzentrum München-Süd</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA5Wb_j50KoY_oM5PP6SrxCJIqtfuwlBKoU3wzKLl_97Efs_R1Je4Wcum0xUGJmr4hSPaXQltAzBxiHb5PCP794mYUA3vg7h2xsdT-jRv-llKnqDz4YRd-hc9pYEyTL8nHEhDQlH5PEvIMOCkL_-a0CPyVGhS7siu5TrMoWcPPD6AYs3m-vLdMiw",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJ2z66LC7fnUcRBSwI-zGNxNE",
+            "plus_code": {
+                "compound_code": "4G4W+Q8 Munich, Germany",
+                "global_code": "8FWH4G4W+Q8"
+            },
+            "rating": 4.6,
+            "reference": "ChIJ2z66LC7fnUcRBSwI-zGNxNE",
+            "scope": "GOOGLE",
+            "types": [
+                "meal_takeaway",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 616,
+            "vicinity": "Thalkirchner Straße 207, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.1143589,
+                    "lng": 11.5319989
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.1157059302915,
+                        "lng": 11.5332461802915
+                    },
+                    "southwest": {
+                        "lat": 48.1130079697085,
+                        "lng": 11.5305482197085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png",
+            "id": "f4c481299ed739f707b4dcc3622a6898c0cc50e1",
+            "name": "Hotel CREO Munich City",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 5304,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/110308217532530089482/photos\">CREO Munich City</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAG_f2pBSfpMxS0bMLyEP4pskVInXPd9JMduYclJUZ5CE8-yJjjYyyJ_NSkzrwwAphBNDLq58ZGya3bgS_nkgFKK66ofkpE6YU3nWxJE3T9Ub1re-MtB0c6x-5LsgSpkQIEhBvTlZFXNi0FMlaSyrZfNwmGhQE-oWiMql9gor_l2GSUjxb9wj1Pw",
+                    "width": 7952
+                }
+            ],
+            "place_id": "ChIJE_ugUcnYnUcRJOJiDMToM-k",
+            "plus_code": {
+                "compound_code": "4G7J+PQ Munich, Germany",
+                "global_code": "8FWH4G7J+PQ"
+            },
+            "rating": 3.4,
+            "reference": "ChIJE_ugUcnYnUcRJOJiDMToM-k",
+            "scope": "GOOGLE",
+            "types": [
+                "lodging",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 360,
+            "vicinity": "Kürnbergstraße 29, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.100506,
+                    "lng": 11.5451449
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.10181593029149,
+                        "lng": 11.5465013802915
+                    },
+                    "southwest": {
+                        "lat": 48.09911796970849,
+                        "lng": 11.5438034197085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "24eee9d049802fe4651d7a7d27451252d46c3f48",
+            "name": "Gasthaus Alter Wirt",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/114494939103432667308/photos\">Alessandro Vascotto</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAdzNMb8MCg0ctL6vEPp7NBNDQUMOEXcXHtdSdSAEw7l4ePVukMR8AKFr8IJ77FqeGzbrmMr-leFiOor98APdO24RCeMtZNCKBSO5qA6LjaUrJ6F1CXbYK7AtDpJUpezH0EhBR29gsljKeyMV3oLByA4C3GhQ5Vowu7xASd3Xk-4DH14laRKBX9A",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJR0RN9ijfnUcRXeq40pDmf6g",
+            "plus_code": {
+                "compound_code": "4G2W+63 Munich, Germany",
+                "global_code": "8FWH4G2W+63"
+            },
+            "price_level": 2,
+            "rating": 4,
+            "reference": "ChIJR0RN9ijfnUcRXeq40pDmf6g",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 589,
+            "vicinity": "Fraunbergstraße 8, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.12254780000001,
+                    "lng": 11.5447735
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.1238406802915,
+                        "lng": 11.5461718302915
+                    },
+                    "southwest": {
+                        "lat": 48.1211427197085,
+                        "lng": 11.5434738697085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "d02c9b9f9536ae50a4ee3ce9325983ab1525c947",
+            "name": "SPORTS & HEALTH Fitness-Club",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1606,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115743629188253420618/photos\">SPORTS &amp; HEALTH Fitness-Club</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAH3uN2NV99heBbrZE4XpknJUAiANB_k_92RrWCljdDkoDctOnDPUsdg1PGhwmliPhcPklMfeOpjD963Z6NHSQEH9qvnLFkmxoW3HaPQbpAWh6Qo6f1OCSltXXfVa66b8gEhDFADiJywTvqQ5ZG3IZxjXhGhRGDVFnStgBAPdqkupPcbVB5elFeQ",
+                    "width": 2856
+                }
+            ],
+            "place_id": "ChIJ995eYkvfnUcRhcHCua6HLRA",
+            "plus_code": {
+                "compound_code": "4GFV+2W Munich, Germany",
+                "global_code": "8FWH4GFV+2W"
+            },
+            "rating": 4.4,
+            "reference": "ChIJ995eYkvfnUcRhcHCua6HLRA",
+            "scope": "GOOGLE",
+            "types": [
+                "spa",
+                "gym",
+                "health",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 67,
+            "vicinity": "Lindwurmstraße 114, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.1170471,
+                    "lng": 11.5403702
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.1183902302915,
+                        "lng": 11.5416045802915
+                    },
+                    "southwest": {
+                        "lat": 48.1156922697085,
+                        "lng": 11.5389066197085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "3d6010fbb05cdb0c2a109f55d07154932521748a",
+            "name": "Pony Club Sendling",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1205,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112702265974621625206/photos\">Pony Club Sendling</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAT87pbWPXlJ-TkoN-82hyoDDqlC37nas-Z4xP6mtYAvpoBizrhCBeQhoTmVSvbQnizyiD2ZFAP1VDdR0Cw7fomOLBmaqM4UNuCiL9HymVCCa6tzE7mif8fXaKvS6GW4wrEhCsYXYYIkAq0BiAeDgAOdM9GhTbe29BCunlqyhmdx4ctCnJkTpblw",
+                    "width": 1200
+                }
+            ],
+            "place_id": "ChIJ9b0oSzXfnUcRWLji4olzAyM",
+            "plus_code": {
+                "compound_code": "4G8R+R4 Munich, Germany",
+                "global_code": "8FWH4G8R+R4"
+            },
+            "rating": 4.1,
+            "reference": "ChIJ9b0oSzXfnUcRWLji4olzAyM",
+            "scope": "GOOGLE",
+            "types": [
+                "hair_care",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 69,
+            "vicinity": "Plinganserstraße 49, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.1216913,
+                    "lng": 11.5501593
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.1229725302915,
+                        "lng": 11.5515895802915
+                    },
+                    "southwest": {
+                        "lat": 48.1202745697085,
+                        "lng": 11.5488916197085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "0c493d20beb7889ad7523c2061494b679380414e",
+            "name": "EUROMASTER GmbH",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 469,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/105672294739955556784/photos\">EUROMASTER GmbH</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAsfn11IhPtAMcckPAEBjzF3SlJ0B6U8zffF_MbTkaLpUkcO98OHYKIyPxUgqz9bsLu75HA_mNeWzl8ufx7lQ8pTLzRILndBUID74dGkQHdJ1S8povSP62jnuLk_CspLPxEhBTn3MDGQXZkGwylY2Vwdw2GhR2RQK-bgEwUa6EPXrVASiCUoNXPw",
+                    "width": 626
+                }
+            ],
+            "place_id": "ChIJEyaJSEnfnUcRYEZ10lm7cB0",
+            "plus_code": {
+                "compound_code": "4HC2+M3 Munich, Germany",
+                "global_code": "8FWH4HC2+M3"
+            },
+            "rating": 3.4,
+            "reference": "ChIJEyaJSEnfnUcRYEZ10lm7cB0",
+            "scope": "GOOGLE",
+            "types": [
+                "car_repair",
+                "store",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 31,
+            "vicinity": "Implerstraße 19, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.1121312,
+                    "lng": 11.5531458
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.1134469802915,
+                        "lng": 11.5545975302915
+                    },
+                    "southwest": {
+                        "lat": 48.1107490197085,
+                        "lng": 11.5518995697085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "53200e0153c8a2041fd7d3a64809aafc638449f9",
+            "name": "Self Bar",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/100168114038099934138/photos\">Arled</a>"
+                    ],
+                    "photo_reference": "CmRaAAAATybKjsKc3NRi88JaI4iOXwqo-7_7FTBPvR1JVZnTGdECrtS-d8BK0fMICxCJW6RboTF8J6nfzqQxWvXfXcrdmCK1ysRXM6nNCTGwyqZwzS6DGXEzv4JD5lER4mmLqn98EhDaE5Ewkj-_MLiyDU4lk5LqGhSvXkgrtiGDAkyCi4WYzps03zWytw",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJp0w6iznfnUcRfHuz_TaVFZw",
+            "plus_code": {
+                "compound_code": "4H63+V7 Munich, Germany",
+                "global_code": "8FWH4H63+V7"
+            },
+            "price_level": 2,
+            "rating": 4,
+            "reference": "ChIJp0w6iznfnUcRfHuz_TaVFZw",
+            "scope": "GOOGLE",
+            "types": [
+                "night_club",
+                "bar",
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 218,
+            "vicinity": "Schäftlarnstraße 62, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.12116819999999,
+                    "lng": 11.5572283
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.12254528029149,
+                        "lng": 11.5585359302915
+                    },
+                    "southwest": {
+                        "lat": 48.11984731970849,
+                        "lng": 11.5558379697085
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+            "id": "6be848b270afda8444e950233da4a231b2007ce8",
+            "name": "Los Bandidos",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 1399,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/107628357860900693785/photos\">Los Bandidos</a>"
+                    ],
+                    "photo_reference": "CmRaAAAAlezKuPe_3krdE6fzoH6tE2CpV0pucN4IYcNqjt3xQcE4M0YqD5NsdC-OE2gLQtltbrhqeQHdLd-UYi5Gv5mhJ9QX7jZNhfNVlf7bajBeWaB1-963fxErGVl5fOw8Tz25EhA56OvKaiKE4JfypK2ySB2wGhQu_iuOPmzrMn1n2efDLEcL0fms1g",
+                    "width": 2500
+                }
+            ],
+            "place_id": "ChIJy0uYc0bfnUcRTA_fHmGBVwU",
+            "plus_code": {
+                "compound_code": "4HC4+FV Munich, Germany",
+                "global_code": "8FWH4HC4+FV"
+            },
+            "price_level": 2,
+            "rating": 3.8,
+            "reference": "ChIJy0uYc0bfnUcRTA_fHmGBVwU",
+            "scope": "GOOGLE",
+            "types": [
+                "restaurant",
+                "point_of_interest",
+                "food",
+                "establishment"
+            ],
+            "user_ratings_total": 501,
+            "vicinity": "Thalkirchner Straße 71, München"
+        },
+        {
+            "geometry": {
+                "location": {
+                    "lat": 48.0767846,
+                    "lng": 11.5120033
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 48.10546799999999,
+                        "lng": 11.5521688
+                    },
+                    "southwest": {
+                        "lat": 48.0616018,
+                        "lng": 11.4709379
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
+            "id": "2ef523558aa0a0781e6816026025ef337533694c",
+            "name": "Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln",
+            "photos": [
+                {
+                    "height": 1952,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/116628776861443729308/photos\">David Rasp</a>"
+                    ],
+                    "photo_reference": "CmRaAAAA-CgJmDLWj75MhDnh_5DT2npfoiT_7VcxFjCNJIb1vOC9NwM98aNXZlYyDP1wWS_TUF8gK_rQ-TsrKJwA5RJe4liMCewlXBrV6V8rh5IgCZW2VbonC_WN2EGQrdvT1GT0EhA4nDKYXd5hRVA8U_rgGzd7GhSaxCv01piSzRXfF_efKjYDVGvq8g",
+                    "width": 2608
+                }
+            ],
+            "place_id": "ChIJrxhrCzjZnUcRzHxkjk0n218",
+            "reference": "ChIJrxhrCzjZnUcRzHxkjk0n218",
+            "scope": "GOOGLE",
+            "types": [
+                "sublocality_level_1",
+                "sublocality",
+                "political"
+            ],
+            "vicinity": "Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln"
+        }
+    ],
+    "status": "OK"
+}
