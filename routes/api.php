@@ -42,4 +42,6 @@ Route::group(['middleware'  => 'guest'], function(){
 
     Route::get('bookings', 'BookingController@all')->name('booking.all');
     Route::post('booking/{id}', 'BookingController@store')->name('booking.store');
+
+    Route::get('users/{user}/bookings', 'BookingController@allBookingsByUser')->name('booking.allBookingsByUser');
 });

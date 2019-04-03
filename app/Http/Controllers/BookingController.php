@@ -19,16 +19,13 @@ class BookingController extends Controller
 
 
     // Create the Booking enty
-    public function store(Request $request, $id=null){
+    public function store(BookingRequest $request, $id=null){
 
         if(!$id) return response()->json([
             'error' => 'NO_PLACE_ID_FOUND'
         ], 422);
 
-        $booking = Booking::create([
-            'name'  => 'PropertyTestName ' . rand(2000,9999),
-            'user_id' => 1,
-        ]);
+        $booking = Booking::create($request->all());
 
         return response()->json([
           'booking' => $booking,
@@ -41,6 +38,23 @@ class BookingController extends Controller
     public function all(){
         $bookings = Booking::with('user')->get();
         return response()->json($bookings, 200);
+    }
+
+
+    // get all bookings from a User
+    public function allBookingsByUser($user=null){
+        $user = User::find($user);
+
+        if(!$user) return response()->json([
+            'error' => 'NO_USER_FOUND'
+        ], 404);
+
+        $bookings = $user->bookings()->get();
+
+        return response()->json([
+            'user'  => $user,
+            'bookings'  => $bookings,
+        ], 200);
     }
 
 }
