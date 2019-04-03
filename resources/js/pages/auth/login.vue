@@ -43,7 +43,7 @@
               </v-button>
 
               <!-- GitHub Login Button -->
-              <login-with-github/>
+              <login-with-github v-if="!disable_login_with_github"/>
             </div>
           </div>
         </form>
@@ -69,6 +69,7 @@ export default {
   },
 
   data: () => ({
+    disable_login_with_github: true,
     callback: false,
     placeid: "",
     form: new Form({
