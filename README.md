@@ -6,7 +6,7 @@ Having some Controller handling the Google API out of the backend
 and mapping some Data structure for final usage in the frontend.  
 Apart of having a Booking Controller which is handling the public api  
 requests as of storing the bookings.  
-  
+
 ## How to run this project
 Clone the repo  
 install composer requirements ```composer install```  
@@ -22,6 +22,12 @@ Run database migration ```php artisan migrate```
 
 
 ## Things to consider
+To get the users location I have used the navigator.geolocation Object with it's callbacks  
+to determine the users lang and long values. After that passing them to google maps and voila.  
+
+Depending on the users location the GooglePlaceController requests the google place api for
+all near properties within 1500m. The parameters can be setup in the GooglePlaceController.  
+
 Wile the 2nd Job was to post fake bookings of a user specified to a property,  
 there was the 3rd option to return bookings of a specific user which only can  
 work with a User Management System. For this I've used the Laravel Basic auth Process.  
