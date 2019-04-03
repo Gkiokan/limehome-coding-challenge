@@ -28,7 +28,7 @@
           </div>
 
 
-          <h5 class='mt-5 mb-3'> Checking In Customer </h5>
+          <h5 class='mt-5 mb-3'> Guest Information </h5>
           <div class="form-group row">
             <label class="col-md-3 col-form-label text-md-left"> Firstname </label>
             <div class="col-md-7">
@@ -81,6 +81,7 @@
 <script>
 import Form from 'vform'
 import { get, sync, call } from 'vuex-pathify'
+import swal from 'sweetalert2'
 
 export default {
   middleware: 'guest',
@@ -139,13 +140,29 @@ export default {
           return city || "NO_CITY_FOUND"
       },
 
+      validate(){
+          return this.form.data_policy
+      },
+
       async submit () {
+          // validate
+          if(!this.validate()){
+              swal('Hups, data policy here!',
+                   'Data polity is a required stuff nowadays, just check it. ' +
+                   'Nobody really cares about it because everything you do require a request to the WWW, ' +
+                   'and everything is hackable....', 'error')
+              return
+          }
+
           // modify the formdata
           this.mapData()
 
           // post it
           this.form.post('/api/booking/' + this.id)
-                   .then( r => console.log(r) )
+                   .then( r => {
+                       console.log(r)
+                       swal('Booking complete!', 'Thanks for your booking! <br><br>In a real world application you would get an Email to verify your booking and also would be redirected to payments systems, we just asume we have done this already.', 'success')
+                   })
 
       }
   }
