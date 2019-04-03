@@ -27,8 +27,12 @@ class BookingRequest extends FormRequest
     {
         return [
             'user_id'   => 'required',
+            'name'      => 'required',
 
-            'name'    => 'required',
+            'firstname'  => 'required',
+            'lastname'   => 'required',
+            'mobile'     => 'required',
+
             // 'adress'  => 'required',
             // 'city'    => 'required',
             // 'phone'   => 'required',
