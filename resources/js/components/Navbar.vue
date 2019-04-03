@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container flex-nowrap-off">
-      <router-link :to="{ name: user ? 'home' : 'welcome' }" class="navbar-brand">
+      <router-link :to="{ name: user ? 'get-started' : 'welcome' }" class="navbar-brand">
         <img src="/limehome-logo-dark.png" class='logo' />
       </router-link>
 
@@ -12,6 +12,12 @@
       <div id="navbarToggler" class="collapse navbar-collapse">
 
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <router-link :to="{ name: 'get-started' }" class="nav-link" active-class="active">
+              All Properties
+            </router-link>
+          </li>
+
           <!-- Authenticated -->
           <li v-if="user" class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-dark"

@@ -11,6 +11,7 @@ import PlacesList from './PlacesList'
 import PlacesCard from './PlacesCard'
 import Carousel from './Carousel'
 import SimplePlaceHeader from './SimplePlaceHeader'
+import BookingForm from './BookingForm'
 
 // Components that are registered globaly.
 [
@@ -29,6 +30,7 @@ import SimplePlaceHeader from './SimplePlaceHeader'
   PlacesCard,
   Carousel,
   SimplePlaceHeader,
+  BookingForm,
 ].forEach(Component => {
   Vue.component(Component.name, Component)
 })

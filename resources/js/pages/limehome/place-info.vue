@@ -28,7 +28,7 @@
                 <div class='col-xs-12 col-md-6'>
                     <h3> Booking </h3>
 
-                    ...
+                    <BookingForm :id="placeid" />
                 </div>
             </div>
         </div>
@@ -83,15 +83,6 @@ export default {
                       this.place = r.data.response.result
                       this.loaded = true
                  })
-        },
-
-        getFormatedAdress(val){
-            let string = val + ' '
-            string.replace(',', 'FU')
-            string.replace(',', '<br>')
-            string.replace(',', '<br>')
-
-            return string
         }
     }
 }
