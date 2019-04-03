@@ -27,6 +27,8 @@ to determine the users lang and long values. After that passing them to google m
 
 Depending on the users location the GooglePlaceController requests the google place api for
 all near properties within 1500m. The parameters can be setup in the GooglePlaceController.  
+I have set only the radius parameter to get the most of all properties that google offers us.  
+This should be obviously changed or defined as you need.  
 
 While the 2nd Job was to post fake bookings of a user specified to a property,  
 there was the 3rd option to return bookings of a specific user which only can  
@@ -45,7 +47,7 @@ Even Though all Bookings Objects will have a guest Object in it to being specifi
 This seems for me more practicable in a real world application if you don't expect the user to be the guest.  
 
 
-## Notes
+## Notes for development (just my 2 cents, you can skip that)  
 Actually I was suprised about the new policy that google runs with the paid api keys only.  
 It took me a while to search for alternatives and then came back to google due the broad  
 way of supporting so much stuff. So I extended my account and configured it all the way down.  
@@ -69,4 +71,10 @@ value of show from 'card' to 'list', which will give you a straight forward tabl
 In both views are two buttons. Detail and Check-In. Details is not used yet but I got great Ideas for it.  
 By Check-In I mean like more Info or get into the place information.  
 
-Also the frontend have a Profile Backend. A little overview area about profile information and thats it.  
+On the Place-info view you get a nice and simple Bootstrap Slider with all the Photos in it.  
+
+Also the frontend have a User Backend. A little overview area about Profile information and thats it.  
+
+Checkout the BookingForm alert message when data policy is not accepted.  
+
+Login is possible though username or email.  
