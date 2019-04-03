@@ -4,13 +4,26 @@
         <SimplePlaceHeader :place="place" v-if="simple_header" />
         <Carousel :photos="place.photos" :title="place.name" v-if="!simple_header"/>
 
-        <div class='container mt-4 mb-5'>
+        <div class='container mt-4 mb-5' v-if="place">
             <div class='row'>
                 <div class='col-xs-12 col-md-6'>
                     <h2> Property Information </h2>
 
-                    <img :src='img.url' v-for="(img, i) in place.photos" v-if="false"
-                         :key="'_image_' + i" style='width: 100%; height: auto;' />
+                    <div class='property'>
+                      <div class='name' v-html="place.name" />
+                      <div class='adress' v-html="place.formatted_address_html" />
+
+                      <div class='misc'>
+                        <b>Misc</b>
+                        <div class='phone' >Phone: {{ place.international_phone_number }}</div>
+                        <div class='google_code'>Plus Code: {{ place.plus_code.global_code }}</div>
+                        <div class='place_id'>Place ID: {{ place.place_id }}</div>
+                      </div>
+
+                      <b>Opening Hours </b>
+                      <div class='opening_hours' v-html="place.opening_hours.formatted_weekday_text_html" />
+                    </div>
+
                 </div>
                 <div class='col-xs-12 col-md-6'>
                     <h3> Booking </h3>
@@ -18,8 +31,6 @@
                     ...
                 </div>
             </div>
-            <pre>{{ placeid }}</pre>
-            <pre>{{ place }}</pre>
         </div>
 
     </div>
@@ -41,9 +52,11 @@ export default {
     }},
 
     mounted(){
-        if(!this.selected)
+        // when we have no id given, just get back to the list
+        if(!this.$route.params.id)
           this.$router.push({ name: 'get-started' })
 
+        // explicitly check for the id (simplest way), set it and give it a go
         if(this.$route.params.id){
             this.placeid = this.$route.params.id
             console.log(':: Place ID has been set to ' + this.placeid)
@@ -53,9 +66,6 @@ export default {
 
     computed: {
         // selected: get('place/selected')
-        selected(){
-            return {"geometry":{"location":{"lat":48.1118842,"lng":11.5474643},"viewport":{"northeast":{"lat":48.1133227802915,"lng":11.5487969802915},"southwest":{"lat":48.11062481970851,"lng":11.5460990197085}}},"icon":"https://maps.gstatic.com/mapfiles/place_api/icons/lodging-71.png","id":"ad93f64d7831d719d60fde1bf4088956a540c3cc","name":"Leonardo Hotel München City West","opening_hours":{"open_now":true},"photos":[{"height":1600,"html_attributions":["<a href=\"https://maps.google.com/maps/contrib/110618533510945285289/photos\">Leonardo Hotel München City West</a>"],"photo_reference":"CmRaAAAA39Yh1-K8fAJjhGQZWeFsdIjzZM9J47DDNRCN1rJKilbhKsqJalYLIeNeC0LZdJ0Yc_dDIodAw_P9GVZC8nmbIQsw2WnT5zWJc06RuL_eebnGbxtDsLkTLU-vHPE9zo9oEhALrPTgY-r2G4nBUQoN8qYIGhRNnbfuJ-PnQGi5dS5HweXCFj2M3Q","width":2400,"url":"https://maps.googleapis.com/maps/api/place/photo?photoreference=CmRaAAAA39Yh1-K8fAJjhGQZWeFsdIjzZM9J47DDNRCN1rJKilbhKsqJalYLIeNeC0LZdJ0Yc_dDIodAw_P9GVZC8nmbIQsw2WnT5zWJc06RuL_eebnGbxtDsLkTLU-vHPE9zo9oEhALrPTgY-r2G4nBUQoN8qYIGhRNnbfuJ-PnQGi5dS5HweXCFj2M3Q&sensor=0&maxheight=1080&maxwidth=1920&key=AIzaSyCfWwZlZ6DvTqAzQhgdro8EUI0MyzU3Ztg"}],"place_id":"ChIJm0eWLzHfnUcR9GU9eWxoiKE","plus_code":{"compound_code":"4G6W+QX Munich, Germany","global_code":"8FWH4G6W+QX"},"rating":4.1,"reference":"ChIJm0eWLzHfnUcR9GU9eWxoiKE","scope":"GOOGLE","types":["lodging","point_of_interest","establishment"],"user_ratings_total":563,"vicinity":"Brudermühlstraße 33, München","update":"MAPPING_SUCCESS"}
-        }
     },
 
     methods: {
@@ -73,12 +83,32 @@ export default {
                       this.place = r.data.response.result
                       this.loaded = true
                  })
+        },
+
+        getFormatedAdress(val){
+            let string = val + ' '
+            string.replace(',', 'FU')
+            string.replace(',', '<br>')
+            string.replace(',', '<br>')
+
+            return string
         }
     }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+    .property {
+        .name {
+            font-weight: bold;
+        }
 
+        .adress,
+        .misc,
+        .opening_hours {
+            margin-bottom: 20px;
+        }
+
+    }
 
 </style>

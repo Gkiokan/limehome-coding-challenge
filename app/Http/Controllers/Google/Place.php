@@ -36,16 +36,33 @@ class Place extends Controller
         $this->response = json_decode( file_get_contents($this->placeURL) );
 
         $this->mapPhotos();
+        $this->modifyData();
 
         return $this->response;
     }
 
 
     // map the response with all the url codes, love the recursivly
-    // usability of Photo Class here, less code, more effective 
+    // usability of Photo Class here, less code, more effective
     public function mapPhotos(){
         if(is_array($this->response->result->photos))
         $this->response->result = Photo::mapAllPhotosURLInPlace($this->response->result);
     }
 
+    // Modify some data
+    // sometimes, we are just faster when we handle the mod in the backend.
+    // like excluding reviews, or parsing adresses correctly
+    public function modifyData(){
+
+        // mod adress
+        $adress = $this->response->result->formatted_address;
+        $this->response->result->formatted_address_html = str_ireplace(",", "<br>", $adress);
+
+        // mod opening hours
+        $opening_hours = $this->response->result->opening_hours->weekday_text;
+        $this->response->result->opening_hours->formatted_weekday_text_html = join('<br>', $opening_hours);
+
+        // delete reviews
+        unset($this->response->result->reviews);
+    }
 }
