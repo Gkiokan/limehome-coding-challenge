@@ -17,6 +17,7 @@ Add valid mySQL credentials
 You may need generate a new Application Key with ```php artisan key:generate```  
 You may need generate a new JWT Secret Key with ```php artisan jwt:secret```  
 Run database migration ```php artisan migrate```
+Run database seed for example users ```php artisan db:seed``` (user: demo, password: test)   
 Serve the project with ```valet``` on the project root or mount ```htdocs``` of your webserver to ```/public```
 
 
