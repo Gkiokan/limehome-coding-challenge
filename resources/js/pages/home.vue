@@ -25,8 +25,11 @@
               </div>
             </div>
 
-            You have <b>{{ bookings.length }}</b> Booking.<br>
+            <div class='alert alert-info'>
+              You have <b>{{ bookings.length }}</b> Booking(s).<br>
+            </div>
             <br>
+            <b> Your Bookings Object below... </b>
             <pre>{{ bookings }}</pre>
 
         </div>
