@@ -3,29 +3,62 @@
     <div class="col m-auto">
 
         <form @submit.prevent="submit" @keydown="form.onKeydown($event)">
-          <!-- Email -->
+
+          <h5 class='mb-3'> Property choosen </h5>
           <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-left">{{ $t('email') }}</label>
+            <label class="col-md-3 col-form-label text-md-left"> Property </label>
             <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
-              <has-error :form="form" field="email"/>
+              <input v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-control" type="name" name="name" disabled>
+              <has-error :form="form" field="name"/>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label text-md-left"> Place ID </label>
+            <div class="col-md-7">
+              <input v-model="form.place_id" :class="{ 'is-invalid': form.errors.has('place_id') }" class="form-control" type="place_id" name="place_id" disabled>
+              <has-error :form="form" field="place_id"/>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label text-md-left"> Plus Code </label>
+            <div class="col-md-7">
+              <input v-model="form.plus_code" :class="{ 'is-invalid': form.errors.has('plus_code') }" class="form-control" type="plus_code" name="plus_code" disabled>
+              <has-error :form="form" field="plus_code"/>
             </div>
           </div>
 
-          <!-- Password -->
+
+          <h5 class='mt-5 mb-3'> Checking In Customer </h5>
           <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-left">{{ $t('password') }}</label>
+            <label class="col-md-3 col-form-label text-md-left"> Firstname </label>
             <div class="col-md-7">
-              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
-              <has-error :form="form" field="password"/>
+              <input v-model="form.firstname" :class="{ 'is-invalid': form.errors.has('firstname') }" class="form-control" type="firstname" name="firstname">
+              <has-error :form="form" field="firstname"/>
             </div>
           </div>
+
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label text-md-left"> Lastname </label>
+            <div class="col-md-7">
+              <input v-model="form.lastname" :class="{ 'is-invalid': form.errors.has('lastname') }" class="form-control" type="lastname" name="lastname">
+              <has-error :form="form" field="lastname"/>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label text-md-left"> Mobile </label>
+            <div class="col-md-7">
+              <input v-model="form.mobile" :class="{ 'is-invalid': form.errors.has('mobile') }" class="form-control" type="mobile" name="mobile">
+              <has-error :form="form" field="mobile"/>
+            </div>
+          </div>
+
 
           <!-- Remember Me -->
           <div class="form-group row">
             <div class="col-md-3"/>
             <div class="col-md-7 d-flex">
-              <checkbox v-model="dsgvo" name="dsvgo">
+              <checkbox v-model="form.data_policy" name="data_policy">
                 I accept (the useless) data policy.
               </checkbox>
             </div>
@@ -52,29 +85,76 @@ import { get, sync, call } from 'vuex-pathify'
 export default {
   middleware: 'guest',
   name: 'BookingForm',
-  props: ['id'],
+  props: ['id', 'place'],
 
   data: () => ({
       form: new Form({
-        user_id : '',
-        email: '',
-        password: ''
+          user_id : '',
+          name: '',
+          adress: '',
+          city: '',
+          phone: '',
+
+          place_id: '',
+          plus_code: '',
+          data_policy: '',
+
+          firstname: '',
+          lastname: '',
       }),
       dsgvo: false
   }),
 
+  mounted(){
+      this.mapUserData()
+      this.mapData()
+  },
+
   computed: {
-      user: get('user/auth')
+      user: get('auth/user')
   },
 
   methods: {
-    async submit () {
+      mapUserData(){
+          this.form.user_id   = this.user.id
+          this.form.firstname = this.user.firstname
+          this.form.lastname  = this.user.lastname
+          this.form.mobile    = this.user.mobile
+      },
 
-        // const { data } = await this.form.post('/api/login')
-        this.form.post('/api/booking/' + this.id)
-                 .then( r => console.log )
+      mapData(){
+          this.form.name     = this.place.name
+          this.form.adress   = this.place.formatted_address
+          this.form.phone    = this.place.international_phone_number
 
-    }
+          this.form.place_id = this.place.place_id
+          this.form.plus_code= this.place.plus_code.global_code
+      },
+
+      async submit () {
+          // modify the formdata
+          this.mapData()
+
+          // post it
+          this.form.post('/api/booking/' + this.id)
+                   .then( r => console.log(r) )
+
+      }
   }
 }
 </script>
+
+<style lang='scss' scoped>
+  h5 {
+      border-bottom: 1px solid #717171;
+  }
+
+  .form-group {
+      padding-left: 20px;
+  }
+
+  input[disabled]{
+      background: transparent;
+      border: none;
+  }
+</style>

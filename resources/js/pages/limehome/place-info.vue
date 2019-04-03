@@ -7,28 +7,35 @@
         <div class='container mt-4 mb-5' v-if="place">
             <div class='row'>
                 <div class='col-xs-12 col-md-6'>
-                    <h2> Property Information </h2>
+                    <h2> Information </h2>
 
                     <div class='property'>
-                      <div class='name' v-html="place.name" />
-                      <div class='adress' v-html="place.formatted_address_html" />
-
-                      <div class='misc'>
-                        <b>Misc</b>
-                        <div class='phone' >Phone: {{ place.international_phone_number }}</div>
-                        <div class='google_code'>Plus Code: {{ place.plus_code.global_code }}</div>
-                        <div class='place_id'>Place ID: {{ place.place_id }}</div>
+                      <h5 class='mb-3'> Property </h5>
+                      <div class='form-group'>
+                          <div class='name' v-html="place.name" />
+                          <div class='adress' v-html="place.formatted_address_html" />
                       </div>
 
-                      <b>Opening Hours </b>
-                      <div class='opening_hours' v-html="place.opening_hours.formatted_weekday_text_html" />
+                      <div class='misc'>
+                        <h5 class='mb-3 mt-5'>Misc</h5>
+                        <div class='form-group'>
+                            <div class='phone' >Phone: {{ place.international_phone_number }}</div>
+                            <div class='google_code'>Plus Code: {{ place.plus_code.global_code }}</div>
+                            <div class='place_id'>Place ID: {{ place.place_id }}</div>
+                        </div>
+                      </div>
+
+                      <h5 class='mb-3 mt-5'>Opening Hours </h5>
+                      <div class='form-group'>
+                        <div class='opening_hours' v-html="place.opening_hours.formatted_weekday_text_html" />
+                      </div>
                     </div>
 
                 </div>
                 <div class='col-xs-12 col-md-6'>
-                    <h3> Booking </h3>
+                    <h2> Booking </h2>
 
-                    <BookingForm :id="placeid" />
+                    <BookingForm :id="placeid" :place="place" />
                 </div>
             </div>
         </div>
@@ -102,4 +109,11 @@ export default {
 
     }
 
+    h5 {
+        border-bottom: 1px solid #717171;
+    }
+
+    .form-group {
+        padding-left: 20px;
+    }
 </style>
