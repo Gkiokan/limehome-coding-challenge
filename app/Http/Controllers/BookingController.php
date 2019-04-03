@@ -7,6 +7,7 @@ use App\Http\Requests\BookingRequest;
 use Auth;
 use App\User;
 use App\Booking;
+use App\Guest;
 
 class BookingController extends Controller
 {
@@ -25,7 +26,21 @@ class BookingController extends Controller
             'error' => 'NO_PLACE_ID_FOUND'
         ], 422);
 
-        $booking = Booking::create($request->all());
+        // get params first
+        $booking_params = $request->only([
+            'user_id',
+            'name', 'adress', 'city', 'phone',
+            'place_id', 'plus_code'
+        ]);
+
+        $guest_params = $request->only(['firstname', 'lastname', 'mobile']);
+
+        // create a booking
+        $booking = Booking::create($booking_params);
+
+        // magic relationship saving goes here
+        $booking->guest()->save(new Guest($guest_params));
+
 
         return response()->json([
           'booking' => $booking,

@@ -21,6 +21,8 @@ class CreateGuestsTable extends Migration
             $table->string('firstname')->default(null)->nullable();
             $table->string('lastname')->default(null)->nullable();
             $table->string('mobile')->default(null)->nullable();
+
+            $table->timestamps();
         });
     }
 
