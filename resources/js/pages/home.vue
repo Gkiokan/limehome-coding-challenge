@@ -18,6 +18,19 @@
         </div>
 
 
+        <div class='booking_information'>
+            <div class="d-flex justify-content-center" v-if="loading">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+
+            You have <b>{{ bookings.length }}</b> Booking.<br>
+            <br>
+            <pre>{{ bookings }}</pre>
+
+        </div>
+
     </div>
     <br>
     <br>
@@ -34,12 +47,35 @@ export default {
   middleware: 'auth',
 
   metaInfo () {
-    return { title: this.$t('home') }
+      return { title: "My Dashboard" }
+  },
+
+  data(){ return {
+      loading: true,
+      bookings: []
+  }},
+
+  mounted(){
+      this.loadBookingInformation()
   },
 
   computed: mapGetters({
-    user: 'auth/user'
+      user: 'auth/user'
   }),
+
+  methods: {
+      loadBookingInformation(){
+          if(!this.user) {
+              console.log(":: User not set, abboard getting Booking Information")
+          }
+
+          axios.get('/api/users/' + this.user.id + '/bookings')
+               .then( r => {
+                    this.bookings = r.data.bookings
+                    this.loading  = false
+               })
+      }
+  }
 
 }
 </script>
