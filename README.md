@@ -38,6 +38,11 @@ This only allows the current user to book something specific for this name only,
 I've expanded this feature to enter guest information on booking. In example I can book  
 something for someoneelse or even make a bulk booking, which can be easly adapted with the guest feature.   
 
+Public API is working and not secured though oAuth or api_token.  
+/bookings returns a list of all bookings  
+/users/{userID}/bookings returns a list of all bookings for the specific user or 404  
+Even Though all Bookings Objects will have a guest Object in it to being specific about the Guest data.  
+This seems for me more practicable in a real world application if you don't expect the user to be the guest.  
 
 
 ## Notes
