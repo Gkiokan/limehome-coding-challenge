@@ -36,4 +36,11 @@ class BookingController extends Controller
         ], 200);
     }
 
+
+    // get all bookings
+    public function all(){
+        $bookings = Booking::with('user')->get();
+        return response()->json($bookings, 200);
+    }
+
 }

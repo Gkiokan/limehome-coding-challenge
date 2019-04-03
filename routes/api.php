@@ -40,5 +40,6 @@ Route::group(['middleware'  => 'guest'], function(){
     Route::get('getPlaces', 'GooglePlacesController@index')->name('google.getPlaces');
     Route::get('getPlace/{id}', 'GooglePlacesController@getPlaceById')->name('google.getPlaceById');
 
+    Route::get('bookings', 'BookingController@all')->name('booking.all');
     Route::post('booking/{id}', 'BookingController@store')->name('booking.store');
 });
