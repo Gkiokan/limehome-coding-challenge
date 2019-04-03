@@ -51,7 +51,7 @@ class BookingController extends Controller
 
     // get all bookings
     public function all(){
-        $bookings = Booking::with('user')->get();
+        $bookings = Booking::with('user')->with('guest')->get();
         return response()->json($bookings, 200);
     }
 
@@ -64,7 +64,7 @@ class BookingController extends Controller
             'error' => 'NO_USER_FOUND'
         ], 404);
 
-        $bookings = $user->bookings()->get();
+        $bookings = $user->bookings()->with('user')->with('guest')->get();
 
         return response()->json([
             'user'  => $user,
