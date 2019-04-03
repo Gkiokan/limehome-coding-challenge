@@ -43,7 +43,7 @@ something for someoneelse or even make a bulk booking, which can be easly adapte
 ## Notes
 Actually I was suprised about the new policy that google runs with the paid api keys only.  
 It took me a while to search for alternatives and then came back to google due the broad  
-way of supporting so much stuff.  
+way of supporting so much stuff. So I extended my account and configured it all the way down.  
 
 After that the Google Place Controller took a while to make it clear, structed and recursive usable.  
 A good example is the method for mapping all the photos within a place Object, this is awesome.  
@@ -51,7 +51,9 @@ Also I thought about additional data mapping, filtering or validating before the
 out to the frontend. There are several ways of doing it, I have made some of them in my code as you can see.  
 
 Without the research and configuration for the Google API I've used aprox. 3 hours on the GooglePlaceController.
-On top of that I spend time on doing coding clean and building the frontend up more then required.
+On top of that I spend time on coding clean and building the frontend up more then required.
+All Requests are handled by the GooglePlaceController and there are all the basic settings for the requests  
+which goes then out to google.
 
 The Google Map Markers have a click event listener, which is currently not used but I have planed
 that on click a little Overlay goes over the map and describes the nessesary Information about the property.  
@@ -62,5 +64,4 @@ value of show from 'card' to 'list', which will give you a straight forward tabl
 In both views are two buttons. Detail and Check-In. Details is not used yet but I got great Ideas for it.  
 By Check-In I mean like more Info or get into the place information.  
 
-Also the frontend have a Profile Backend which needs to be filled for a better usability for the user  
-while booking properties. A little overview area about profile information and thats it.  
+Also the frontend have a Profile Backend. A little overview area about profile information and thats it.  
