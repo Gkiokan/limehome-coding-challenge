@@ -37,8 +37,8 @@ Route::group(['middleware' => 'guest:api'], function () {
 // Google API
 Route::group(['middleware'  => 'guest'], function(){
 
-    Route::get('getPlaces', 'GooglePlaces@index')->name('google.getPlaces');
-    Route::get('getPlace/{id}', 'GooglePlaces@getPlaceById')->name('google.getPlaceById');
+    Route::get('getPlaces', 'GooglePlacesController@index')->name('google.getPlaces');
+    Route::get('getPlace/{id}', 'GooglePlacesController@getPlaceById')->name('google.getPlaceById');
 
-    Route::post('booking/{id}', 'Booking@store')->name('booking.store');
+    Route::post('booking/{id}', 'BookingController@store')->name('booking.store');
 });

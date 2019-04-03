@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class GooglePlaces extends Controller
+class GooglePlacesController extends Controller
 {
 
     // get all properties

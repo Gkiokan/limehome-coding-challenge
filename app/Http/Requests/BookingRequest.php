@@ -14,7 +14,8 @@ class BookingRequest extends FormRequest
      */
     public function authorize()
     {
-        return Auth::user();
+        // return Auth::user() would also allow only authenticated users
+        return true;
     }
 
     /**
@@ -28,12 +29,12 @@ class BookingRequest extends FormRequest
             'user_id'   => 'required',
 
             'name'    => 'required',
-            'adress'  => 'required',
-            'city'    => 'required',
-            'phone'   => 'required',
+            // 'adress'  => 'required',
+            // 'city'    => 'required',
+            // 'phone'   => 'required',
 
-            'place_id'  => 'required',
-            'plus_code' => 'required',
+            // 'place_id'  => 'required',
+            // 'plus_code' => 'required',
         ];
     }
 }
