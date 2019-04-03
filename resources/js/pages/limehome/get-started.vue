@@ -40,16 +40,14 @@
 
 
       <div class='container mt-4 mb-5'>
-        
+
           <template v-if="loaded">
               <PlacesList :places="places"  v-if="show == 'list'" />
               <PlacesCard :places="places" v-if="show == 'card'" />
           </template>
           <template v-else>
-              <div class="d-flex justify-content-center">
-                <div class="spinner-border" role="status">
-                  <span class="sr-only">Loading...</span>
-                </div>
+              <div class="d-flex justify-content-center" style='height: 150px;'>
+                    <LimeHomeLoader :absolute="true" v-if="!gainAccess"/>
               </div>
           </template>
 

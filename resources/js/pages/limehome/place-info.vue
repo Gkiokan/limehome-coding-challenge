@@ -9,7 +9,7 @@
                 <div class='col-xs-12 col-md-6'>
                     <h2> Information </h2>
 
-                    <div class='property'>
+                    <div class='property' v-if="loaded">
                       <h5 class='mb-3'> Property </h5>
                       <div class='form-group'>
                           <div class='name' v-html="place.name" />
@@ -20,14 +20,14 @@
                         <h5 class='mb-3 mt-5'>Misc</h5>
                         <div class='form-group'>
                             <div class='phone' >Phone: {{ place.international_phone_number }}</div>
-                            <div class='google_code'>Plus Code: {{ place.plus_code.global_code }}</div>
+                            <div class='google_code'>Plus Code: {{ getPlusCode() }}</div>
                             <div class='place_id'>Place ID: {{ place.place_id }}</div>
                         </div>
                       </div>
 
                       <h5 class='mb-3 mt-5'>Opening Hours </h5>
                       <div class='form-group'>
-                        <div class='opening_hours' v-html="place.opening_hours.formatted_weekday_text_html" />
+                        <div class='opening_hours' v-html="getOpeningHours()" />
                       </div>
                     </div>
 
@@ -99,6 +99,30 @@ export default {
                       this.place = r.data.response.result
                       this.loaded = true
                  })
+        },
+
+        getPlusCode(){
+            let gpc = ""
+            if(this.place.plus_code)
+              if(this.place.plus_code.global_code)
+                gpc = this.place.plus_code.global_code
+
+            if(!this.place.plus_code)
+              this.place.plus_code = { global_code : gpc }
+
+            return gpc;
+        },
+
+        getOpeningHours(){
+            let hrs = "";
+            if(this.place.opening_hours)
+              if(this.place.opening_hours.formatted_weekday_text_html)
+                hrs = place.opening_hours.formatted_weekday_text_html
+
+            if(!this.place.opening_hours)
+              this.place.opening_hours = { formatted_weekday_text_html : hrs}
+
+            return hrs
         }
     }
 }
