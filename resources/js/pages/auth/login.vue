@@ -107,7 +107,7 @@ export default {
       await this.$store.dispatch('auth/fetchUser')
 
       if(this.callback == false)
-        this.$router.push({ name: 'home' })
+        this.$router.push({ name: 'get-started' })
       else
         this.$router.push({ name: 'place-info', params: { id: this.placeid } })
 
