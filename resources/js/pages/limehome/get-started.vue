@@ -54,7 +54,7 @@
 import axios from 'axios'
 
 export default {
-    middleware: 'guest',
+    // middleware: 'guest', // you may set this to auth to allow loggedIn users only
     layout: 'full',
 
     metaInfo () {

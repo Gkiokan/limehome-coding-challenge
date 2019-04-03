@@ -11,6 +11,11 @@
         margin-top: .5rem;
         border-top: 1px solid #f2f2f2 !important;
         // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08);
+
+        .dropdown-item {
+            color: #717171;
+            font-weight: 100;
+        }
     }
 }
 
