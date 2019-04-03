@@ -101,8 +101,7 @@ export default {
 
           firstname: '',
           lastname: '',
-      }),
-      dsgvo: false
+      })
   }),
 
   mounted(){
@@ -126,9 +125,18 @@ export default {
           this.form.name     = this.place.name
           this.form.adress   = this.place.formatted_address
           this.form.phone    = this.place.international_phone_number
+          this.form.city     = this.getCityFromPlace(this.place)
 
           this.form.place_id = this.place.place_id
           this.form.plus_code= this.place.plus_code.global_code
+      },
+
+      getCityFromPlace(place){
+          let city = place.address_components.filter((obj) => {
+            return obj.types.includes('locality');
+          })[0].long_name;
+
+          return city || "NO_CITY_FOUND"
       },
 
       async submit () {
