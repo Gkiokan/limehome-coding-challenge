@@ -57,6 +57,8 @@ that on click a little Overlay goes over the map and describes the nessesary Inf
 There are two components to list the places in response, currently they are displayed as cards but  
 there is also a list component already prepared. Checkout the get-started view and change the data  
 value of show from 'card' to 'list', which will give you a straight forward table.  
-  
+In both views are two buttons. Detail and Check-In. Details is not used yet but I got great Ideas for it.  
+By Check-In I mean like more Info or get into the place information.  
+
 Also the frontend have a Profile Backend which needs to be filled for a better usability for the user  
 while booking properties. A little overview area about profile information and thats it.  
