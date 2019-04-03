@@ -69,4 +69,35 @@ class LoginController extends Controller
     {
         $this->guard()->logout();
     }
+
+
+    /**
+    * Get the needed authorization credentials from the request.
+    *
+    * @param  \Illuminate\Http\Request  $request
+    * @return array
+    */
+     protected function credentials(Request $request)
+     {
+         $field = $this->field($request);
+
+         return [
+             $field => $request->get($this->username()),
+             'password' => $request->get('password'),
+         ];
+     }
+
+     /**
+      * Determine if the request field is email or username.
+      *
+      * @param  \Illuminate\Http\Request  $request
+      * @return string
+      */
+     public function field(Request $request)
+     {
+         $email = $this->username();
+
+         return filter_var($request->get($email), FILTER_VALIDATE_EMAIL) ? $email : 'name';
+     }
+
 }
