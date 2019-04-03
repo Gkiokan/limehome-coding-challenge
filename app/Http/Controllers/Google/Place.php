@@ -55,12 +55,16 @@ class Place extends Controller
     public function modifyData(){
 
         // mod adress
-        $adress = $this->response->result->formatted_address;
-        $this->response->result->formatted_address_html = str_ireplace(",", "<br>", $adress);
+        if(isset($this->response->result->formatted_address)):
+          $adress = $this->response->result->formatted_address;
+          $this->response->result->formatted_address_html = str_ireplace(",", "<br>", $adress);
+        endif;
 
         // mod opening hours
-        $opening_hours = $this->response->result->opening_hours->weekday_text;
-        $this->response->result->opening_hours->formatted_weekday_text_html = join('<br>', $opening_hours);
+        if(isset($this->response->result->opening_hours)):
+          $opening_hours = $this->response->result->opening_hours->weekday_text;
+          $this->response->result->opening_hours->formatted_weekday_text_html = join('<br>', $opening_hours);
+        endif;
 
         // delete reviews
         unset($this->response->result->reviews);

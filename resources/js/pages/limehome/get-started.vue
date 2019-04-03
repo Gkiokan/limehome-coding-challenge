@@ -40,9 +40,18 @@
 
 
       <div class='container mt-4 mb-5'>
-
-          <PlacesList :places="places"  v-if="show == 'list'" />
-          <PlacesCard :places="places" v-if="show == 'card'" />
+        
+          <template v-if="loaded">
+              <PlacesList :places="places"  v-if="show == 'list'" />
+              <PlacesCard :places="places" v-if="show == 'card'" />
+          </template>
+          <template v-else>
+              <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+          </template>
 
           <DebugObject :object="places" :each="false" v-if="places.length > 0 && showDebug"/>
       </div>
