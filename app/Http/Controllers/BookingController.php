@@ -26,13 +26,13 @@ class BookingController extends Controller
         ], 422);
 
         $booking = Booking::create([
-            'name'  => 'test',
+            'name'  => 'PropertyTestName ' . rand(2000,9999),
             'user_id' => 1,
         ]);
 
         return response()->json([
           'booking' => $booking,
-          'request' => $requst->all(),
+          'request' => $request->all(),
         ], 200);
     }
 

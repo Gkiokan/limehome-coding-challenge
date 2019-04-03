@@ -18,14 +18,14 @@ class CreateBookingsTable extends Migration
 
             $table->integer('user_id')->unsigned();
 
-            $table->string('name');
-            $table->string('adress');
-            $table->string('city');
-            $table->string('phone');
+            $table->string('name')->default(null)->nullable();
+            $table->string('adress')->default(null)->nullable();
+            $table->string('city')->default(null)->nullable();
+            $table->string('phone')->default(null)->nullable();
 
-            $table->string('place_id');
-            $table->string('plus_code');
-            
+            $table->string('place_id')->default(null)->nullable();
+            $table->string('plus_code')->default(null)->nullable();
+
             $table->timestamps();
         });
     }
