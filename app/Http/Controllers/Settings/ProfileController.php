@@ -18,10 +18,10 @@ class ProfileController extends Controller
         $user = $request->user();
 
         $this->validate($request, [
-            'name' => 'required',
+            // 'name' => 'required',
             'email' => 'required|email|unique:users,email,'.$user->id,
         ]);
 
-        return tap($user)->update($request->only('name', 'email'));
+        return tap($user)->update($request->only('email', 'firstname', 'lastname', 'mobile'));
     }
 }
